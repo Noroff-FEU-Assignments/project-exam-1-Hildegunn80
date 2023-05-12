@@ -1,0 +1,323 @@
+/*
+    https://earnest-blancmange-9e62aa.netlify.app/index.html
+*/
+:root {
+    --color-coffe: #DF9059;
+    --color-bg: rgb(244, 246, 244);
+    --color-bg-light: #D6F1F3;
+    --color-hoover: green;
+    --color-menu: #28CEDE;
+    --color-ascent:#ffffff;
+    --color-links:#112A46;
+}
+
+.logo a {
+    font-size: 16px;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(241, 232, 232);
+    font-family: 'Franklin Gothic Medium' , Verdana, sans-serif;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+h1,
+h2{
+    letter-spacing: 0.2em; 
+    font-size: 3.0rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+p {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    font-family: Bahnschrift , Verdana, sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 20px;
+}
+
+
+img {
+    width: 100%;
+}
+
+.link a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    grid-gap: 10px;
+    background-color: var(--color-bg);
+    align-items: center;
+    min-height: 100px;
+}
+
+.header i {
+    padding-left: 20px;
+}
+
+.footer-container{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    background-color: black;
+    color: white; 
+    align-items: center; 
+}
+
+.footer-container ul{
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    flex-direction: row;
+}
+
+footer i {
+    padding: 20px;
+}
+
+/* Styling for footer*/
+.social-icons {
+    padding-inline-start: 0px;
+    min-height: 50px;
+}
+.social-icons a {
+    font-size: 16px;
+    color:white;
+    padding: 0px;
+}
+
+.social-links {
+    min-height: 50px;
+}
+
+/* Menu */
+.nav ul {
+    display: flex;
+    background-color: azure;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+nav {
+    display: block;
+    position: static;
+}
+
+nav li {
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: none;
+}
+
+#menu-checkbox {
+    display:none;
+}
+
+.current {
+   text-decoration: underline;
+   color: black;
+}
+
+/*.header .title {
+    display: none;    
+}*/
+
+.spinner {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    margin: -50px 0 0 -50px;
+    border: 16px solid #65593f00;
+    border-top: 16px solid #ffffff;
+    border-bottom: 16px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ********************************************** size < 1000px  */
+@media only screen and (max-width:1030px) {
+    .gridcontainer {
+        grid-template-areas: 
+        /*"header"*/
+        "boks-b"
+        "boks-c"
+        "boks-d"
+        "boks-e"
+        "boks-f"
+        "boks-g"
+        "boks-h"
+        "boks-i"
+        "boks-j"
+        "boks-k"
+        "boks-l"
+        ;    
+    }
+    
+    .current {
+        background-color: var(--color-coffe);
+    }
+
+    .gridcontainer {
+        grid-template-columns: 100%;
+    }
+
+    .boks-b p {
+        display: none;
+    }
+
+    a {
+        font-size: 18px;
+    }
+
+    .link a {
+        font-size: 18px;
+    }
+
+    .header a {
+        display: block;
+        text-align: center;
+        margin: 5px;
+    }
+
+    .header {
+        background-color: var(--color-ascent);
+    }
+
+    .boks-b h1 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    /*styling for hamburgermenu*/
+    nav {
+        display:none;
+    }
+    .header .title {
+        display: block;
+    }
+    .header .title h2 {
+        font-size: 2.5rem;
+    }
+    
+    #menu-checkbox:checked ~ nav {
+        display: block;
+        z-index: 3;
+    }
+
+    #menu-checkbox {
+        display:none;
+    }
+    
+    .header .hamburger-icon {
+        display: initial;
+        position: absolute;
+        right: 20px;
+    }
+
+    nav ul {
+        padding-inline-start: 0px;        
+    }
+
+    /* Menu block vertical*/
+    nav li {
+        display:block;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 15px;
+    }
+
+    nav {
+        position: absolute;
+        background: rgb(244, 246, 244);
+        top: 115px;
+        right: 0px;
+    }
+
+    .header {
+        display:flex;
+        align-content: space-between;
+    }
+
+}
+
+@media only screen and (max-width:670px) {
+    .header .title h2 {
+        font-size: 1.4em;
+    }
+}
+
+
+@media only screen and (max-width:500px) {
+        h2{
+            letter-spacing: 0em; 
+            font-size: 2rem;
+            font-family: 'Montserrat', sans-serif;
+    }
+}
+
+
+@media only screen and (max-width:450px) {
+    .header .title  {
+        display: none;
+    }
+}
+
+
+/* ********************************************** size < 315 px  */
+@media only screen and (max-width:315px) {
+    .boks-b h1 {
+        font-size: 18px;
+    }
+
+    .link a {
+        font-size: 12px;
+    }
+    .boks-b a {
+        font-size: 18px;
+    }
+    nav a {
+        font-size: 12px;
+        padding: 2px;
+    }
+    h2 {
+        letter-spacing: 0em; 
+        font-size: 1.2rem;
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
