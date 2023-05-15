@@ -1,4 +1,4 @@
-const url="http://localhost/Lowcarbheaven/wordpress/wp-json/wp/v2/posts";
+const url="http://10.20.21.208/Lowcarbheaven/wordpress/wp-json/wp/v2/posts";
 const postContainer = document.querySelector(".latest-posts");
 
 async function getPosts() {
@@ -34,10 +34,8 @@ function enableClass(className, show) {
 
 function createHTML(posts){
     posts.forEach(function(posts){
-        postContainer.innerHTML += `<a href="productpage.html?id=${posts.id}">
+        postContainer.innerHTML += `< href="productpage.html?id=${posts.id}">
         <h2>${posts.rendered}</h2>
-
-        
         </a>`;
         console.log(getPosts);
         
@@ -61,4 +59,4 @@ function createHtmlError(error) {
     title.style.color = "black";
 }
 
-getProducts();
+getPosts();
