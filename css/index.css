@@ -1,0 +1,19 @@
+.latest-posts{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    border: 3px solid lightgray;
+    padding: 10px;
+}
+
+.article{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 9px 4px 4px lightgray;
+
+}
+
+.article h2{
+font-size: 25px;
+text-align: center;
+}

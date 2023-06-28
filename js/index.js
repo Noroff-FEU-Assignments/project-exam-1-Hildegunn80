@@ -30,8 +30,8 @@ function createHTML(post) {
 
             let source_url = featuredmedia['0'].source_url;
 
-            container.innerHTML+= `<h2>${post.title.rendered}</h2>
-                                    <img src="${source_url}">`;
+            container.innerHTML+= `<div class="article"><h2>${post.title.rendered}</h2>
+                                    <img src="${source_url}"></div>`;
 
             console.log ("title: "+post.title.rendered);
             console.log ("url: "+source_url);
