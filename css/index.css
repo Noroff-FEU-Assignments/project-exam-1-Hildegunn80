@@ -17,3 +17,8 @@
 font-size: 25px;
 text-align: center;
 }
+
+.carousel{
+    display: flex;
+    flex-direction: row;
+}
