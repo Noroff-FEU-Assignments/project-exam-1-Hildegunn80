@@ -14,11 +14,27 @@
 }
 
 .article h2{
-font-size: 25px;
+font-size: 15px;
 text-align: center;
+line-height: 0px;
 }
+
+
+
 
 .carousel{
     display: flex;
     flex-direction: row;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+ 
+#arrow-1, #arrow-2{
+    margin: 20px;
+    color: black;
 }
