@@ -1,4 +1,5 @@
-.latest-posts{
+
+.latest-posts {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
@@ -6,35 +7,35 @@
     padding: 10px;
 }
 
-.article{
+.article {
     display: flex;
     flex-direction: column;
     box-shadow: 9px 4px 4px lightgray;
-
 }
 
-.article h2{
-font-size: 15px;
-text-align: center;
-line-height: 0px;
+.article h2 {
+    font-size: 15px;
+    text-align: center;
+    line-height: 0px;
 }
 
-
-
-
-.carousel{
+.carousel {
     display: flex;
     flex-direction: row;
 }
 
-.wrapper{
+.wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
  
-#arrow-1, #arrow-2{
+#arrow-left, #arrow-right {
     margin: 20px;
     color: black;
+}
+
+.button {
+    border: none;
+    background-color:transparent;
 }
