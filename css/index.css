@@ -39,3 +39,20 @@
     border: none;
     background-color:transparent;
 }
+.introduction{
+    display: flex;
+    flex-direction: row;
+}
+.imagecontainer{
+    width:50%;
+}
+.description{
+    width: 50%;
+    background-color: aliceblue;
+}
+
+.description h1{
+    font-size: 20px;
+    text-align: left;
+    align-self: center;
+}
