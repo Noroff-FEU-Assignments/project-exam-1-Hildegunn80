@@ -1,23 +1,8 @@
-
-
-const url = "http://10.20.21.208/Lowcarbheaven/wordpress/wp-json/wp/v2/posts?_embed&per_page=100";
 const container = document.querySelector(".latest-posts");
 const arrowLeft = document.getElementById("arrow-left");
 const arrowRight = document.getElementById("arrow-right");
-let json;
 let index = 0;
-
-async function fetchPosts() {    
-    try {
-        const response = await fetch(url);
-        json = await response.json();
-        createHTML();
-    }
-    catch (error){
-        console.log(error);
-        container.innerHTML =error;
-    }
-}
+let json;
 
 function goLeft() {
     index-=4;
@@ -73,6 +58,12 @@ function createHTML() {
                                 `;
     }    
 }
-    
+
 configureButtons();
-fetchPosts();
+
+fetchJson().then(
+    function (result) {
+        json = result;
+        createHTML();
+    }
+)
