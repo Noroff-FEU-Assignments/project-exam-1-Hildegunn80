@@ -42,21 +42,28 @@
 .introduction{
     display: flex;
     flex-direction: row;
+    background-color: orange;
+    align-items: center;
+    padding-left: 50px;
 }
 .imagecontainer{
     width:100%;
 }
 .description{
-    width: 50%;
+    background-color: orange;
 }
 
 
 
 .description h2{
-    font-size: 20px;
-    text-align: center;
+    font-size: 25px;
+    text-align: left;
     align-self: center;
-    font-style: italic;
+    font-size: 50px;
+}
+
+.description p{
+    font-size: 16px;
 }
 
 .description p{
