@@ -1,0 +1,25 @@
+.wrapper{
+    display: flex;
+    width: 99%;
+    flex-direction: column;
+}
+.blogcontainer{
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    
+}
+
+.blogcontainer h2{
+    
+    font-size: 25px;
+}
+
+.morePosts{
+    max-width: 150px;
+    height: 60px;
+    background-color: white;
+    align-self: center;
+    margin-top: 10px;
+}
