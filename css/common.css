@@ -1,14 +1,7 @@
-/*
-    https://earnest-blancmange-9e62aa.netlify.app/index.html
-*/
+
 :root {
-    --color-coffe: #DF9059;
-    --color-bg: rgb(244, 246, 244);
-    --color-bg-light: #D6F1F3;
-    --color-hoover: green;
-    --color-menu: #28CEDE;
-    --color-ascent:#ffffff;
-    --color-links:#112A46;
+
+    --color-bg:rgb(232, 232, 232);
 }
 
 body {
@@ -16,7 +9,7 @@ body {
     width: 100%;
     margin: 0;
     box-sizing: border-box;
-    background-color: rgb(246, 244, 244);
+    background-color: var(--color-bg);
     font-family: 'Franklin Gothic Medium' , Verdana, sans-serif;
 }
 
