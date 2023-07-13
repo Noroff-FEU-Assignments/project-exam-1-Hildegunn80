@@ -1,8 +1,8 @@
 
 const blogContainer = document.querySelector(".blogcontainer");
-const morePosts = document.getElementsByClassName(".morePosts");
+const morePosts = document.getElementById("more-posts");
 let json;
-let index = 0;
+let count = 10;
 
 fetchJson().then(
     function (result) {
@@ -10,34 +10,27 @@ fetchJson().then(
         createHTML();
     }
 )
+configureButton();
 
 function configureButton() {
     console.log("Configure button")
     morePosts.addEventListener("click", viewMore);
 }
 
-
 function viewMore() {
-    index+=9;
-    createHTML(index);
+    count+=10;
+    createHTML();
 }
 
 function createHTML() {
-
     // boundary check
-    if(index < 0) {
-        index = 0;
-    }
-    let end = index + 9
-    if(end > json.length) {
-        end = json.length;
-        index = json.length -9;
+    if(count > json.length) {
+        count = json.length;
     }
 
     blogContainer.innerHTML = "";
-    for (let i = index; i < end; i++) {
+    for (let i = 0 ; i < count; i++) {
         //console.log("Title: " + json[i].title.rendered);
-
         let featuredmedia = json[i]._embedded['wp:featuredmedia'];
 
         if (typeof featuredmedia == "undefined") {
@@ -56,14 +49,5 @@ function createHTML() {
                                 </div>
                                 </section>
                                 `;
-    }    
-    configureButton();
-
-    fetchJson().then(
-        function (result) {
-            json = result;
-            createHTML();
-        }
-        )
-
+    }
 }
