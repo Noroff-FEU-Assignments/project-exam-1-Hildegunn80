@@ -44,15 +44,21 @@
     flex-direction: row;
 }
 .imagecontainer{
-    width:50%;
+    width:100%;
 }
 .description{
     width: 50%;
-    background-color: aliceblue;
 }
 
-.description h1{
+
+
+.description h2{
     font-size: 20px;
-    text-align: left;
+    text-align: center;
     align-self: center;
+    font-style: italic;
+}
+
+.description p{
+    text-align: left;
 }
