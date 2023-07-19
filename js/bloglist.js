@@ -43,10 +43,10 @@ function createHTML() {
         //console.log ("url: "+source_url);
 
         blogContainer.innerHTML += ` <section class="carousel">
-                                <div class"content-card-1">
-                                <div class="article"><h2>${json[i].title.rendered}</h2>
+                                <a href="blogpost.html?=${json.id}">
+                                <h2>${json[i].title.rendered}</h2>
                                 <img src="${source_url}"></div>
-                                </div>
+                                </a>
                                 </section>
                                 `;
     }

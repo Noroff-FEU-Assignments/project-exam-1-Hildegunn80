@@ -23,3 +23,7 @@
     align-self: center;
     margin-top: 10px;
 }
+
+.content-card-1{
+    display: flex;
+}
