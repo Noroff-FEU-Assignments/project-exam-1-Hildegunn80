@@ -43,7 +43,7 @@ function createHTML() {
         //console.log ("url: "+source_url);
 
         blogContainer.innerHTML += ` <section class="carousel">
-                                <a href="blogpost.html?=${json.id}">
+                                <a href="blogpost.html?id=${json[i].id}">
                                 <h2>${json[i].title.rendered}</h2>
                                 <img src="${source_url}"></div>
                                 </a>
