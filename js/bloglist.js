@@ -4,13 +4,15 @@ const morePosts = document.getElementById("more-posts");
 let json;
 let count = 10;
 
+configureButton();
+
 fetchJson().then(
     function (result) {
         json = result;
         createHTML();
+        enableSpinner(false);
     }
 )
-configureButton();
 
 function configureButton() {
     console.log("Configure button")

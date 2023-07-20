@@ -12,3 +12,16 @@ async function fetchJson() {
         return null;
     }
 }
+
+function enableSpinner(show) {
+    const loader = document.querySelector(".spinner");
+    enableClass(loader,show);
+}
+
+function enableClass(className, show) {
+    if(show) {
+        className.style.display = "block";
+    } else {
+        className.style.display = "none";
+    }   
+}

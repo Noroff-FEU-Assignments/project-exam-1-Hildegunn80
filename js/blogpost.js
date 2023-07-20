@@ -3,19 +3,18 @@ const queryString =document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-const url = "http://10.20.21.208/Lowcarbheaven/wordpress/wp-json/wp/v2/posts/"+ id+"?_embed";
+const postUrl = "http://10.20.21.208/Lowcarbheaven/wordpress/wp-json/wp/v2/posts/"+ id +"?_embed";
 
 async function fetchPost() {
     try {
-        const response = await fetch(url);
+        const response = await fetch(postUrl);
         if (!response.ok) {
             throw new Error("Error fetch from API", {cause: response});
         }
         const json = await response.json();
         console.log(json);
         createHTML(json);
-
-        return json;
+        enableSpinner(false);
     }
     catch(error) {
         console.log(error);
@@ -23,26 +22,7 @@ async function fetchPost() {
     }
 }
 
-function start() {
-    enableSpinner(true);
-    fetchPost(url);
-    enableSpinner(false);
-}
-
-function enableSpinner(show) {
-    const loader = document.querySelector(".spinner");
-    enableClass(loader,show);
-}
-
-function enableClass(className, show) {
-    if(show) {
-        className.style.display = "block";
-    } else {
-        className.style.display = "none";
-    }   
-}
-
-start();
+fetchPost();
 
 function createHTML(json) {
 

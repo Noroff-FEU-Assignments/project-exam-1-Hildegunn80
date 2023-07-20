@@ -5,7 +5,7 @@
 // Settings //
 let pageIcon;// = "images/icon.png";
 let menuClass = ".header";
-let siteName = "Lowcarb haven"
+let siteName = "Lowcarb heaven"
 let menuTitle = "LOWCARB HEAVEN"
 let mobileSize = false;
 

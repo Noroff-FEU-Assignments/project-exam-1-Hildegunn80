@@ -56,7 +56,7 @@ function createHTML() {
                                 </div>
                                 </section>
                                 `;
-    }    
+    }
 }
 
 configureButtons();
