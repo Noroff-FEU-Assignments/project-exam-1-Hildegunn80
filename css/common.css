@@ -13,8 +13,6 @@ body {
     font-family: 'Franklin Gothic Medium' , Verdana, sans-serif;
 }
 
-
-
 html {
     height: 100%;
     width: 100%;
@@ -27,20 +25,18 @@ h2{
     font-family: 'Montserrat', sans-serif;
 }
 
-.title h2{
+.title h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size:40px;
     text-transform: uppercase;
 }
 
-.font-2{
+.font-2 {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style: italic;
     font-size: 10px;
-    text-transform: lowercase;
-    
+    text-transform: lowercase;    
 }
-
 
 p {
     margin-block-start: 0.5em;
@@ -148,9 +144,9 @@ nav li {
    color: black;
 }
 
-/*.header .title {
-    display: none;    
-}*/
+.header .title {
+    display: block;
+}
 
 .spinner {
     position: absolute;
