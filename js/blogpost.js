@@ -7,7 +7,6 @@ const url = "http://10.20.21.208/Lowcarbheaven/wordpress/wp-json/wp/v2/posts/"+ 
 
 async function fetchPost() {
     try {
-        console.log("(debug) Get url: " + url)
         const response = await fetch(url);
         if (!response.ok) {
             throw new Error("Error fetch from API", {cause: response});
@@ -24,17 +23,9 @@ async function fetchPost() {
     }
 }
 
-async function start() {
+function start() {
     enableSpinner(true);
-    
-    const blogpost = fetchPost(url);
-    //console.log("past post");
-    //console.log(blogpost);
-
-    //let mediaUrl = getMediaUrl(blogpost);
-    //console.log("media url: " + mediaUrl);
-
-    //createHTML(blogpost);
+    fetchPost(url);
     enableSpinner(false);
 }
 
@@ -61,20 +52,18 @@ function createHTML(json) {
     
     let featuredmedia = json._embedded['wp:featuredmedia'];
 
-        if (typeof featuredmedia == "undefined") {
-            console.log("missing featuredmedia, skipping");
-            return;
-        }
+    if (typeof featuredmedia == "undefined") {
+        throw new Error("missing wp:featuredmedia");
+    }
 
     let source_url = featuredmedia['0'].source_url;
-    source_url = source_url.replace("localhost","10.20.21.208");    // workaround
-    console.log ("url: "+source_url);
+    source_url = source_url.replace("localhost","10.20.21.208");    // workaround dev
 
     blogpostContainer.innerHTML += `<section class="carousel">
                                 <h2>${json.title.rendered}</h2>
-                                <img src="${source_url}"></div>
+                                <img src="${source_url}" class="mediaPicture"></img>
                                 <div>${json.content.rendered}</div>
-                            </section>
+                                </section>
                             `;
     
 }
@@ -87,7 +76,7 @@ function createHtmlError(error) {
     
     blogpostContainer.innerHTML += `<div class="title"><h1>OPS 404 ERROR.....</h1></div>
                             <img src="/images/404.webp" height="200" style="max-width: 240px">
-                            <div class="details-date">An error occurred trying to fetch the API</div>
+                            <div class="details-date">An error occurred trying to fetch the API data</div>
                             
                             <div class="home"><a href="index.html"><h1>Return to home</h1></a></div>
                             `;
