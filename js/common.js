@@ -7,7 +7,7 @@ async function fetchJson() {
         let json = await response.json();
         return json;
     }
-    catch (error){
+    catch (error) {
         console.log(error);
         return null;
     }
