@@ -2,6 +2,9 @@ const blogpostContainer = document.querySelector(".blogpostcontainer");
 const queryString =document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
+var modal = document.getElementsByClassName(".modal");
+var image = document.getElementsByClassName(".mediaPicture");
+
 
 const postUrl = "http://10.20.21.208/Lowcarbheaven/wordpress/wp-json/wp/v2/posts/"+ id +"?_embed";
 
@@ -24,6 +27,10 @@ async function fetchPost() {
 
 fetchPost();
 
+image.onclick = function() {
+    modal.style.display = "block";
+  }
+
 function createHTML(json) {
 
     blogpostContainer.innerHTML = "";
@@ -39,11 +46,13 @@ function createHTML(json) {
     let source_url = featuredmedia['0'].source_url;
     source_url = source_url.replace("localhost","10.20.21.208");    // workaround dev
 
-    blogpostContainer.innerHTML += `<section class="carousel">
+    blogpostContainer.innerHTML += ` <div class="modal">
+                                <section class="carousel">
                                 <h2>${json.title.rendered}</h2>
                                 <img src="${source_url}" class="mediaPicture"></img>
                                 <div>${json.content.rendered}</div>
                                 </section>
+                                </div>
                             `;
     
 }
