@@ -14,7 +14,7 @@
     <script src="https://kit.fontawesome.com/dcfbb8069d.js" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contact.css">
    
     
     <title>Contact|Lowcarb</title>
@@ -22,6 +22,40 @@
 
 <body>
     <div class="header"></div>
+    <div class="wrapper">
+    <div class="contact-form">
+        <h2>Contact us</h2>
+        <form action="/"method="GET" id="contactForm">
+            
+            <label>
+                Name
+                <input name="inputname" id="inputname" />
+            </label>
+            <div class="form-error" id="inputnameError">Please fill in your firstname</div>
+            
+            <label>
+                Email
+                <input name="email" id="email" />
+            </label>
+            <div class="form-error" id="emailError">Please fill in your email</div>
+        
+            <label>
+                Mobile
+                <input name="mobile" id="mobile" />
+            </label>
+            <div class="form-error" id="mobileError">Please fill in your mobile number</div>
+            
+            <label>
+                Address
+                <input name="address" id="address" />
+            </label>
+            <div class="form-error" id="addressError">Please fill in your address</div>
+            <textarea id="messagebox" name="message" cols="50" rows="10">Your message here</textarea> 
+        </div>
+            <input type="submit" value="Send">
+        </form>
+        </div>
+        <div class="form-validated"></div>
 
     <script src="js/menu.js"></script>
     <footer class="footer-container"></footer>
