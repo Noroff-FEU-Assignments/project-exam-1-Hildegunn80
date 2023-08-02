@@ -48,6 +48,8 @@ function createHTML() {
                                 <a href="blogpost.html?id=${json[i].id}">
                                 <h2>${json[i].title.rendered}</h2>
                                 <img src="${source_url}"></div>
+                                <p>${"Date:"+json[i].date}</p>
+                                <p> ${json[i].excerpt.rendered}</p>
                                 </a>
                                 </section>
                                 `;
