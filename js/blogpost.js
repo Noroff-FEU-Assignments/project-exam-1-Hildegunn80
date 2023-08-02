@@ -28,7 +28,7 @@ function createHTML(json) {
 
     blogpostContainer.innerHTML = "";
     
-    console.log("Crete html Title: " + json.title.rendered);
+    console.log("Create html Title: " + json.title.rendered);
     
     let featuredmedia = json._embedded['wp:featuredmedia'];
 
@@ -36,22 +36,26 @@ function createHTML(json) {
         throw new Error("missing wp:featuredmedia");
     }
 
-    let source_url = featuredmedia['0'].source_url;
-    source_url = source_url.replace("localhost","10.20.21.208");    // workaround dev
-
+    let rendered = json.content.rendered.replace(/localhost/g,"10.20.21.208");  // workaround dev
+    
     blogpostContainer.innerHTML += `
-                                <section class="carousel">
-                                    <h2>${json.title.rendered}</h2>
-                                    <img id="postImage" src="${source_url}" alt="${featuredmedia['0'].alt_text}" style="width:100%;max-width:300px">
-                                    <div>${json.content.rendered}</div>
-                                </section>
-                                
+                                <div>${rendered}</div>
+
                                 <div id="imageModal" class="modal">
                                     <img class="modal-content" id="idImageModal">
                                 </div>
-                            `;
+                                `;
     
-    enableModal();
+    let modal = document.getElementById("imageModal");
+    let modalImg = document.getElementById("idImageModal");
+    modal.addEventListener('click', modalClick);
+
+    for (const image of document.images) {
+        image.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+    }
 }
 
 function createHtmlError(error) {
@@ -95,3 +99,4 @@ function enableModal() {
 
     modal.addEventListener('click', modalClick);
 }
+
