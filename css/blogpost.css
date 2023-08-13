@@ -24,6 +24,12 @@
   animation-name: zoom;
   animation-duration: 0.6s;
 }
+.wp-block-image{
+  max-width: 300px;
+}
+.wp-block-gallery{
+  display: flex;
+}
 
 @-webkit-keyframes zoom {
   from {-webkit-transform:scale(0)} 

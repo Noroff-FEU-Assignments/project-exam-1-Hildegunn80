@@ -29,7 +29,14 @@ const htmlPages = [
         file: "blogpost.html",
         name: "blogpost",
         visible: false
+    },
+
+    {
+        file:"about.html",
+        name:"about",
+        visible: true
     }
+
 ];
 
 /* CODE */

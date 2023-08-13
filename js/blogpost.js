@@ -58,6 +58,8 @@ function createHTML(json) {
     }
 }
 
+
+
 function createHtmlError(error) {
     enableSpinner(false);
 
