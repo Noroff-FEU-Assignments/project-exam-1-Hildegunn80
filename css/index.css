@@ -60,12 +60,40 @@
     text-align: left;
     align-self: center;
     font-size: 50px;
+    background-color: #3D9FBE;
+    padding: 10px;
 }
 
-.description p{
-    font-size: 16px;
+.description {
+    padding:10px;
+    font-size: 20px;
 }
 
 .description p{
     text-align: left;
 }
+.italic{
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 30px;
+}
+@media only screen and (max-width:1270px) {
+    .article h2 {
+        font-size: 12px;
+    }
+    }
+
+
+@media only screen and (max-width:1200px) {
+.description h2{
+    font-size: 30px;
+}
+}
+@media only screen and (max-width:1070px) {
+    .description h2{
+        font-size: 30px;
+    }
+    }
+
+
+

@@ -23,15 +23,28 @@ function configureButtons() {
 function createHTML() {
     arrowLeft.style.color = "Red";
     arrowRight.style.color = "Green";
+    const width = document.body.clientWidth;
 
     // boundary check
     if(index < 0) {
         index = 0;
     }
-    let end = index + 4
-    if(end > json.length) {
-        end = json.length;
-        index = json.length -4;
+    let end;
+
+    console.log(width);
+    if(width<=1070) {
+        console.log("less than 1070");
+        end=index+1
+        if(end >json.lenght){
+            end=json.lenght;
+            index =json.length-1;
+        }
+    } else {
+        end = index + 4
+        if(end > json.length) {
+            end = json.length;
+            index = json.length -4;
+        }
     }
 
     container.innerHTML = "";

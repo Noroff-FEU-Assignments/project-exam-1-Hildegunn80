@@ -26,9 +26,12 @@ h2{
 }
 
 .title h2 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size:40px;
-    text-transform: uppercase;
+font-family: 'Dancing Script', cursive;
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Life Savers', cursive;
+color: #0D1A26;
+font-size: 30px;
+letter-spacing: 0px;
 }
 
 .font-2 {
@@ -65,10 +68,9 @@ img {
 }
 
 .header {
-    grid-area: header;
     display: flex;
     grid-gap: 10px;
-    background-color: var(--color-bg);
+    background-color:whitesmoke;
     align-items: center;
     min-height: 100px;
 }
