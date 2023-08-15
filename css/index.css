@@ -73,12 +73,12 @@
     text-align: center;
     align-self: center;
     font-size: 50px;
-    background-color: #0e2b34;
+   /* background-color: #0e2b34;*/
     padding: 10px;
-    border: solid 2px #5fadc9;
-    box-shadow: 5px 3px 3px #3e8ea9;
-    border-radius: 10px;
-    color: #ddedf3;
+    /*border: solid 2px #5fadc9;*/
+    /*box-shadow: 5px 3px 3px #3e8ea9;*/
+    /*border-radius: 10px;*/
+    color: black;
 }
 
 .description {
