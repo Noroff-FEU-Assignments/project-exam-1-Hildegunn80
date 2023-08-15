@@ -44,16 +44,16 @@ function createHTML() {
         source_url = source_url.replace("localhost","10.20.21.208");    // workaround
         //console.log ("url: "+source_url);
 
-        blogContainer.innerHTML += `<section class="carousel">
-                                <a href="blogpost.html?id=${json[i].id}">
-                                <img src="${source_url}" id="image"></div>
-                                <div class="text-content">
-                                  <h2>${json[i].title.rendered}</h2>
-                                  <p>${"Date:"+json[i].date}</p>
-                                  <p> ${json[i].excerpt.rendered}</p>
-                                </div>
-                                </a>
-                                </section>
-                                `;
+        blogContainer.innerHTML += `<section class="blogPostWrapper">
+                                        <a href="blogpost.html?id=${json[i].id}">
+                                            <img src="${source_url}" id="image"></img>
+                                            <div class="text-content">
+                                                <h2>${json[i].title.rendered}</h2>
+                                                <p>${"Date:"+json[i].date}</p>
+                                                ${json[i].excerpt.rendered}
+                                            </div>
+                                        </a>
+                                    </section>
+                                    `;
     }
 }

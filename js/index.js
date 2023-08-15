@@ -70,11 +70,11 @@ function createHTML() {
         source_url = source_url.replace("localhost","10.20.21.208");    // workaround
         //console.log ("url: "+source_url);
 
-        container.innerHTML += ` <section class="carousel">
-                                <div class"content-card-1">
-                                <div class="article"><h2>${json[i].title.rendered}</h2>
-                                <img src="${source_url}"></div>
-                                </div>
+        container.innerHTML += `<section class="carousel">
+                                    <div class"content-card-1">
+                                        <div class="article"><h2>${json[i].title.rendered}</h2>
+                                        <img src="${source_url}"></div>
+                                    </div>
                                 </section>
                                 `;
     }
