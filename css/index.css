@@ -30,10 +30,22 @@
     flex-direction: row;
     align-items: center;
 }
+
+#latest-posts-heading{
+    text-align: center;
+    position: relative;
+    background-color: #cbe4ed;
+    padding: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
  
 #arrow-left, #arrow-right {
     margin: 20px;
     color: black;
+}
+#arrow-left i:hover, #arrow-right i:hover{
+    color: #226074;
 }
 
 .button {
@@ -58,11 +70,15 @@
 
 .description h1{
     font-size: 25px;
-    text-align: left;
+    text-align: center;
     align-self: center;
     font-size: 50px;
-    background-color: #3D9FBE;
+    background-color: #0e2b34;
     padding: 10px;
+    border: solid 2px #5fadc9;
+    box-shadow: 5px 3px 3px #3e8ea9;
+    border-radius: 10px;
+    color: #ddedf3;
 }
 
 .description {

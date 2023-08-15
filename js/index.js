@@ -21,8 +21,6 @@ function configureButtons() {
 }
 
 function createHTML() {
-    arrowLeft.style.color = "Black";
-    arrowRight.style.color = "Black";
     const width = document.body.clientWidth;
 
     // boundary check
