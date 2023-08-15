@@ -7,16 +7,17 @@
     align-content: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;    
+    gap: 5px; 
+       
 }
 
 .blogcontainer h2{
-    
+    padding-top: 2px;
     font-size: 25px;
 }
 .blogcontainer p{
     font-size: 18px;
-    padding:0px 10px 10px 10px;
+    padding:10px 10px 10px 10px;
 }
 
 .morePosts{
@@ -29,4 +30,15 @@
 
 .content-card-1{
     display: flex;
+}
+
+@media only screen and (max-width: 1000px) {
+    .blogcontainer {
+      grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .blogcontainer {
+      grid-template-columns: 1fr;
+    }
 }
