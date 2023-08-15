@@ -79,13 +79,19 @@ img {
     padding-left: 20px;
 }
 
+.social-icons{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .footer-container{
     padding: 10px;
     display: flex;
     flex-direction: column;    
     justify-content: center;
-    background-color: black;
-    color: white; 
+    background-color:white;
+    color: black; 
     align-items: center; 
 }
 
@@ -100,20 +106,6 @@ footer i {
     padding: 20px;
 }
 
-/* Styling for footer*/
-.social-icons {
-    padding-inline-start: 0px;
-    min-height: 50px;
-}
-.social-icons a {
-    font-size: 16px;
-    color:white;
-    padding: 0px;
-}
-
-.social-links {
-    min-height: 50px;
-}
 
 /* Menu */
 .nav ul {
@@ -172,22 +164,7 @@ nav li {
 
 /* ********************************************** size < 1000px  */
 @media only screen and (max-width:1030px) {
-    .gridcontainer {
-        grid-template-areas: 
-        /*"header"*/
-        "boks-b"
-        "boks-c"
-        "boks-d"
-        "boks-e"
-        "boks-f"
-        "boks-g"
-        "boks-h"
-        "boks-i"
-        "boks-j"
-        "boks-k"
-        "boks-l"
-        ;    
-    }
+   
     
     .current {
         background-color: var(--color-coffe);
