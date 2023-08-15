@@ -9,12 +9,23 @@
 
 #contactForm {
     max-width: 600px;
-    background-color: rgb(255, 255, 255);
+    background-color: #173f48;
     justify-content: center;
     left: 50%;
     margin:10px;
 
 }
+
+.banner{
+    margin: 0px;
+    background-color:#ddeef2;
+    padding: 1px;
+  }
+
+  h1{
+    font-size: 30px;
+    text-align: center;
+ }
 
 
 .boks-d form input[type=submit] {
@@ -23,6 +34,7 @@
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
+    padding: 3px;
 }
 
 #contactForm{

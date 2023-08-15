@@ -5,8 +5,20 @@
   .about-container{
     max-width: 600px;
     margin: 0 auto;
+    background-color: #ddeef2;
+    padding: 15px;
   }
   h1{
     font-size: 30px;
   }
   
+  .banner{
+    margin: 0px;
+    background-color:#e4f1f5;
+    padding: 1px;
+  }
+
+  h1{
+    font-size: 30px;
+    text-align: center;  
+  }

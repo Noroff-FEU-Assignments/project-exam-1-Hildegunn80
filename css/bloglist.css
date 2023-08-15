@@ -7,29 +7,50 @@
     align-content: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 5px; 
        
 }
 
+.banner{
+    margin: 0px;
+    background-color:#ddeef2;
+    padding: 1px;
+
+}
+ h1{
+    font-size: 30px;
+    text-align: center;
+ }
 .blogcontainer h2{
-    padding-top: 2px;
     font-size: 25px;
 }
 .blogcontainer p{
     font-size: 18px;
-    padding:10px 10px 10px 10px;
 }
 
 .morePosts{
     max-width: 150px;
     height: 60px;
-    background-color: white;
+    background-color: orange;
     align-self: center;
-    margin-top: 10px;
+    margin: 10px;
 }
 
 .content-card-1{
     display: flex;
+}
+
+.text-content{
+    margin-top: 0px;
+    margin-left: 20px;
+    display:flex;
+    flex-direction: column;
+    background-color: #ddeef2;
+    color: #0e2d33;
+    max-width:500px;
+}
+#image{
+    max-width:500px;
+    margin-bottom: 0px;
 }
 
 @media only screen and (max-width: 1000px) {
