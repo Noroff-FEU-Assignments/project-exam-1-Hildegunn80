@@ -1,7 +1,7 @@
 
 .latest-posts {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
     gap: 10px;
     border: 3px solid lightgray;
     padding: 10px;
@@ -72,11 +72,7 @@
 .description p{
     text-align: left;
 }
-.italic{
-    font-style: italic;
-    font-weight: bolder;
-    font-size: 30px;
-}
+
 @media only screen and (max-width:1270px) {
     .article h2 {
         font-size: 12px;
@@ -88,11 +84,23 @@
 .description h2{
     font-size: 30px;
 }
+.description p{
+    display: none;
+}
 }
 @media only screen and (max-width:1070px) {
     .description h2{
         font-size: 30px;
+        background-color: orange;
     }
+    .latest-posts {
+        flex: 1;
+    }
+    .introduction{
+        flex-direction: column;
+
+    }
+
     }
 
 

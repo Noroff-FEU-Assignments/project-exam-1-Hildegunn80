@@ -34,11 +34,21 @@ function createHTML() {
     console.log(width);
     if(width<=1070) {
         console.log("less than 1070");
-        end=index+1
+        end=index+2
         if(end >json.lenght){
             end=json.lenght;
-            index =json.length-1;
+            index =json.length-2;
         }
+        console.log(width);
+        if(width<=700) {
+            console.log("less than 1070");
+            end=index+2
+            if(end >json.lenght){
+                end=json.lenght;
+                index =json.length-1;
+            }
+        }
+
     } else {
         end = index + 4
         if(end > json.length) {
