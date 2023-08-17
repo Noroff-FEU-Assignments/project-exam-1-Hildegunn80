@@ -23,7 +23,7 @@ a {
 
 .banner {
     margin: 0px;
-    background-color:#ddeef2;
+    background-color:var(--banner);
     padding: 5px;
 }
 
