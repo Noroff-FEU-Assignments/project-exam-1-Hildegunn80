@@ -59,11 +59,30 @@
 .introduction{
     display: flex;
     flex-direction: row;
-    background-color: orange;
+    background-color: #ffa500;
     align-items: center;
     padding-left: 50px;
 }
 
+.readmore{
+    width: 150px;
+    height: 50px;
+    font-family:'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    color: var(--font-color);
+    font-size: 15px;
+    background-color: #86c4d2;
+    border: #FFEDCC 1px; 
+    margin: 7px;
+    
+}
+.readmore:hover{
+    background-color: #a9d5df;
+}
+
+.readmore i{
+    margin:10px;
+}
 
 .imagecontainer{
     width:100%;
