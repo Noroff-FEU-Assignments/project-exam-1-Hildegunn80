@@ -11,7 +11,7 @@
 }
 
 #contactForm {
-    border: 30px solid orange;
+    border: 10px solid #B9C55B;
     max-width: 600px;
     justify-content: center;
     left: 50%;
@@ -19,21 +19,20 @@
     box-shadow: 0,5px 0,5px 0,5px black;
     background-color: #f3fdff;
     padding: 25px;
+ 
 
 }
 
 
 .banner{
     margin: 0px;
-    background-color:white;
+    background-color: #D9E0A7;
     padding: 1px;
   }
-.banner i{
-    margin-right: 10px;
-}
+
   h1{
     font-family: 'Caveat', cursive;
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
  }
 
@@ -48,7 +47,7 @@
 }
 
 #sendMessage{
-    background-color: rgb(120, 244, 120);
+    background-color: #B9C55B;
     border: solid #DBEDF3 1px;
     width: 350px;
     height: 50px;
@@ -58,7 +57,7 @@
 }
 
 #sendMessage:hover{
-    background-color: #B6DBE7;
+    background-color:#E4E9C0;
 }
 
 
