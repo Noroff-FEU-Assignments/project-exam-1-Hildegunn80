@@ -1,24 +1,46 @@
 .wp-block-image{
     max-width: 400px;
   }
+  .recipes{
+    background-color: #EEE7F9;
+    font-style: italic;
+  }
+  .recipes:hover{
+    background-color: #ddd7e7;
+  }
+
 
   .about-container{
     max-width: 600px;
-    margin: 0 auto;
-    background-color: #ddeef2;
+    margin: 20px auto;
+    background-color:  #FFD280;
+    color: var(--font-color);
     padding: 15px;
+    border: #FFE4B3 10px dotted;
   }
-  h1{
+  h2{
     font-size: 30px;
   }
   
   .banner{
     margin: 0px;
-    background-color:#e4f1f5;
+    background-color:orange;
     padding: 1px;
   }
 
   h1{
     font-size: 30px;
     text-align: center;  
+    font-family: 'Caveat', cursive;
+  }
+  .wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    background:  #FFD280;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
   }
