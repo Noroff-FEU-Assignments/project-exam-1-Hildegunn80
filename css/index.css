@@ -5,7 +5,10 @@
     gap: 10px;
     border: 3px solid lightgray;
     padding: 10px;
+    
 }
+
+
 
 .article {
     display: flex;
@@ -38,6 +41,7 @@
     padding: 20px;
     margin-top: 0px;
     margin-bottom: 0px;
+    font-family: 'Caveat', cursive;
 }
  
 #arrow-left, #arrow-right {
@@ -59,16 +63,21 @@
     align-items: center;
     padding-left: 50px;
 }
+
+
 .imagecontainer{
     width:100%;
 }
 .description{
-    background-color: orange;
+    background-color:#FFB733;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 
 
-.description h1{
+.description h1 {
     font-size: 25px;
     text-align: center;
     align-self: center;
@@ -78,7 +87,7 @@
     /*border: solid 2px #5fadc9;*/
     /*box-shadow: 5px 3px 3px #3e8ea9;*/
     /*border-radius: 10px;*/
-    color: black;
+    color: #250656;
 }
 
 .description {
@@ -88,6 +97,11 @@
 
 .description p{
     text-align: left;
+}
+
+
+.recipes:hover{
+    background-color: #cbe4ed;
 }
 
 @media only screen and (max-width:1270px) {
