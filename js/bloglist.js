@@ -52,6 +52,7 @@ function createHTML() {
                                                 <p>${"Date:"+json[i].date}</p>
                                                 ${json[i].excerpt.rendered}
                                             </div>
+                                            <button class="readmore"><i class="fa-solid fa-utensils"></i>Read more</button>
                                         </a>
                                     </section>
                                     `;
