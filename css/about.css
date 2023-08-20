@@ -1,37 +1,73 @@
-.wp-block-image{
-    max-width: 400px;
+.wp-image-188{
+   width: 500px;
+    height: 100%;
+    justify-self: center;
   }
   .recipes{
-    background-color: #EEE7F9;
+    background-color: #C7B8C7;
     font-style: italic;
+    border: 2px solid #572957;
   }
   .recipes:hover{
     background-color: #ddd7e7;
   }
 
+  .wp-image-174{
+    border-radius: 50%;
+    height: 100%;
+    max-width: 200px;
+    justify-self: center;
+  }
+
+  .wp-image-192{
+    max-height: 300px;
+    max-width: 100%;
+    flex-direction: row;
+  }
+
+
 
   .about-container{
-    max-width: 600px;
+    max-width: 800px;
     margin: 20px auto;
-    background-color:  #FFD280;
-    color: var(--font-color);
+    background-color:rgb(68, 17, 68);
+    color:white;
     padding: 15px;
-    border: #FFE4B3 10px dotted;
+    border: #FFE4B3 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   h2{
     font-size: 40px;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    color: white;
+  }
+
+ h3 {
+  font-size: 25px;
+  text-align: left;
+  color: white;
+
+    
+  }
+  p{
+    color: white;
   }
   
   .banner{
     margin: 0px;
-    background-color:orange;
+    background-color:#005A00;
     padding: 1px;
   }
 
   h1{
-    font-size: 30px;
+    font-size: 70px;
     text-align: center;  
     font-family: 'Caveat', cursive;
+    color: rgb(248, 210, 248);
   }
   .wrapper{
     display: flex;
@@ -39,7 +75,7 @@
     flex-direction: column;
     justify-content: center;
     max-width: 100%;
-    background:  #FFD280;
+    background:#BEACBE;
     background-repeat: no-repeat;
     background-size: 100%;
 
