@@ -1,4 +1,5 @@
 const blogpostContainer = document.querySelector(".blogpostcontainer");
+const banner = document.querySelector(".banner");
 const queryString =document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
@@ -45,6 +46,9 @@ function createHTML(json) {
                                     <img class="modal-content" id="idImageModal">
                                 </div>
                                 `;
+    banner.innerHTML += `
+                               <h1>${json.title.rendered}</h1>`
+    
     
     let modal = document.getElementById("imageModal");
     let modalImg = document.getElementById("idImageModal");
