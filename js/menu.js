@@ -3,7 +3,7 @@
 */
 
 // Settings //
-let pageIcon;// = "images/icon.png";
+let pageIcon = "images/logosky.svg";
 let menuClass = ".header";
 let siteName = "Lowcarb heaven"
 let menuTitle = "LOWCARB HEAVEN"
