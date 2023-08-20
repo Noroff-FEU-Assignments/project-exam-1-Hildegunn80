@@ -11,13 +11,13 @@
 }
 
 #contactForm {
-    border: 10px solid #B9C55B;
+    border: 10px solid #a17caa;
     max-width: 600px;
     justify-content: center;
     left: 50%;
     margin:40px;
     box-shadow: 0,5px 0,5px 0,5px black;
-    background-color: #f3fdff;
+    background-color: #f5fff3;
     padding: 25px;
  
 
@@ -35,6 +35,9 @@
     font-size: 40px;
     text-align: center;
  }
+ h2{
+    font-size: 40px;
+ }
 
 
 .boks-d form input[type=submit] {
@@ -47,7 +50,7 @@
 }
 
 #sendMessage{
-    background-color: #B9C55B;
+    background-color: #5dcd21;
     border: solid #DBEDF3 1px;
     width: 350px;
     height: 50px;
@@ -58,6 +61,19 @@
 
 #sendMessage:hover{
     background-color:#E4E9C0;
+}
+
+.questions{
+    background-color: white;
+    padding: 30px;
+    margin: 20px;
+    border: yellow 8px dotted;
+    
+}
+h3{
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 4px;
 }
 
 
