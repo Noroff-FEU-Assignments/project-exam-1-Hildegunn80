@@ -41,6 +41,19 @@
   to {transform:scale(1)}
 }
 
+.banner{
+    margin: 0px;
+    background-color: var(--banner);
+    padding: 1px;
+}
+
+h1{
+  font-family: 'Caveat', cursive;
+  font-size: 40px;
+  text-align: center;
+  
+}
+
 /* modal small screen */
 @media only screen and (max-width: 800px) {
     .modal-content {
