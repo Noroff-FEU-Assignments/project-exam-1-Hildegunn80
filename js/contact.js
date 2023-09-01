@@ -17,34 +17,36 @@ const messageError = document.querySelector("#messageError");
 const formMessageValidated = document.querySelector("#form_validated");
 const buttonCloseMessage = document.querySelector(".close-message");
 
-function validateForm(){
+function validateForm() {
     event.preventDefault();
-    if(isLenghtValid(firstName.value,5)===true){
+
+    let success = true;
+    if(isLenghtValid(firstName.value,5)===true) {
         firstnameError.style.display ="none"
-    }else{
+    } else {
+        success = false;
         firstnameError.style.display ="block"
     }
 
-    if(isLenghtValid(lastName.value,5)===true){
+    if(isLenghtValid(lastName.value,5)===true) {
         lastNameError.style.display ="none"
-    }else{
+    } else {
+        success = false;
         lastNameError.style.display ="block"
     }
 
+    if(success) {
+        formMessageValidated.style.display=("block")
+        form.reset();
+    }
 }
 
-form.addEventListener("submit", validateForm );{
-    formMessageValidated.style.display=("block")
-    form.reset();
-
-}
-
-
+form.addEventListener("submit", validateForm );
 buttonCloseMessage.addEventListener("click", closeMessage);
-function closeMessage(){
+
+function closeMessage() {
     formMessageValidated.style.display=("none")
 } 
-
 
 function isEmailValid(email) {
     const regEx = /\S+@\S+\.\S+/;
@@ -52,13 +54,13 @@ function isEmailValid(email) {
     return patternMatches;
 }
 
-function isLenghtValid (value,len ){
-    if (value.trim().length>=len){ 
-    return true;
-    }else{
-    return false;
+function isLenghtValid(value,len ) {
+    if (value.trim().length>=len) {
+        return true;
+    } else {
+        return false;
     }
-    }
+}
 
 
     
