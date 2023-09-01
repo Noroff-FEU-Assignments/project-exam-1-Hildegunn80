@@ -4,8 +4,7 @@
     flex-direction: row;
     gap: 10px;
     border: 3px solid lightgray;
-    padding: 10px;
-    
+    padding: 10px;  
     
 }
 
@@ -46,7 +45,7 @@
 }
  
 #arrow-left, #arrow-right {
-    margin: 20px;
+    margin: 10px;
     color: black;
 }
 #arrow-left i:hover, #arrow-right i:hover{
@@ -102,11 +101,7 @@
     text-align: center;
     align-self: center;
     font-size: 50px;
-   /* background-color: #0e2b34;*/
     padding: 10px;
-    /*border: solid 2px #5fadc9;*/
-    /*box-shadow: 5px 3px 3px #3e8ea9;*/
-    /*border-radius: 10px;*/
     color: #250656;
 }
 
@@ -139,18 +134,55 @@
     display: none;
 }
 }
-@media only screen and (max-width:1070px) {
-    .description h2{
-        font-size: 30px;
+@media only screen and (max-width:700px) {
+ .description h1{
+        font-size: 25px;
         background-color: orange;
     }
-    .latest-posts {
-        flex: 1;
+    .description{
+        background-color: orange;
     }
+
     .introduction{
         flex-direction: column;
+        padding: 0px;
 
     }
+    .carousel{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .latest-posts{
+        flex-direction: row;
+    }
+   
+.imagecontainer{
+    display: none;
+}
+
+.recipes{
+    max-width: 250px;
+    font-size: 14px;
+}
+#latest-posts-heading{
+    font-size: 28px;
+}
+.latest-posts{
+    display: block;
+    border:none;
+}
+#arrow-left, #arrow-right {
+    margin: 4px;
+    color: black;
+    max-width: 7px;
+}
+
+.readmore{
+    justify-self: center;
+}
+
 
     }
 

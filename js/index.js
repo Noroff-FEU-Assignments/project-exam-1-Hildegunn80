@@ -32,14 +32,14 @@ function createHTML() {
     console.log(width);
     if(width<=1070) {
         console.log("less than 1070");
-        end=index+2
+        end=index+3
         if(end >json.lenght){
             end=json.lenght;
-            index =json.length-2;
+            index =json.length-3;
         }
         console.log(width);
         if(width<=700) {
-            console.log("less than 1070");
+            console.log("less than 700");
             end=index+2
             if(end >json.lenght){
                 end=json.lenght;

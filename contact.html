@@ -29,37 +29,56 @@
             <h3>Have any questions?</h3>
             <p>Drop me a message in the form below</p>
         </div>
+
         <div class="contact-form">
             <form action="/"method="GET" id="contactForm">
+
+              <div>
+                  <label>
+                     First name
+                      <input name="inputFirstName" id="FirstName"/>
+                  </label>
+                  <div class="form-error" id="FnameError" placeholder="At least 5 characters">Please fill in your first name</div>
+              </div>
+
+               <div>
+                   <label>
+                     Last Name
+                     <input name="inputLastName" id="LastName"/>
+                    </label>
+                  <div class="form-error" id="LnameError" placeholder="At least 5 characters">Please fill in your last name</div>
+               </div>
+
+               <div>
+                 <label>
+                    Email
+                    <input name="email" id="email"/>
+                  </label>
+                   <div class="form-error" id="emailError">Please fill in your email</div>
+              </div>
+
+              <div>
                 <label>
-                  Name
-                <input name="inputname" id="inputname" />
+                     Fill in your subject
+                    <input name="subject" id="subject" placeholder="At least 15 charaters"/>
                 </label>
-                <div class="form-error" id="inputnameError">Please fill in your firstname</div>
-            
-                <label>
-                Email
-                <input name="email" id="email" />
-                 </label>
-                 <div class="form-error" id="emailError">Please fill in your email</div>
-        
-                <label>
-                  Mobile
-                   <input name="mobile" id="mobile" />
-                 </label>
-                <div class="form-error" id="mobileError">Please fill in your mobile number</div>
-            
-                <label>
-                  Address
-                <input name="address" id="address" />
-                </label>
-                <div class="form-error" id="addressError">Please fill in your address</div>
-                <textarea id="messagebox" name="message" cols="50" rows="10">Your message here</textarea> 
-                <input type="submit" value="Send" id="sendMessage">
+                  <div class="subject-error" id="subjectError">Subject</div>
+              </div>
+
+               <div>
+                  <textarea id="messagebox" name="message" cols="50" rows="10" placeholder="At least 25 characters">Your message here, more than 25 characters</textarea> 
+                    <div class="error" id="messageError">Please enter your message, more than 25 characters</div>
+                    <input type="submit" value="Send" id="sendMessage">
+                  </div>
                </div>
            </form>
         </div>
-        <div class="form-validated"></div>
+        
+        <div id="form_validated" class="form-validated">
+          <p>Thank you!</p>
+           <p>Your message was successfully sent</p>
+           <button class="close-message">Close</button>
+       </div>
 
         <footer class="footer-container">
             <div><a href="contact.html"><i class="far fa-envelope"></i></a></div>

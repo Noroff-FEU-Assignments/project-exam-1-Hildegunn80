@@ -24,11 +24,29 @@
   animation-name: zoom;
   animation-duration: 0.6s;
 }
-.wp-block-image{
-  max-width: 300px;
-}
+
 .wp-block-gallery{
   display: flex;
+  align-items: center;
+}
+.wp-block-image{
+  max-width: 500px;
+  height: 100%;
+  margin-left: 0px;
+}
+
+.blogpostcontainer{
+  max-width: 1000px;
+  display: flex;
+  
+  
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(224, 224, 232);
+  align-content: center;
+  align-items: center;
 }
 
 @-webkit-keyframes zoom {
@@ -54,9 +72,23 @@ h1{
   
 }
 
+h2{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  text-align: left;
+}
+
 /* modal small screen */
 @media only screen and (max-width: 800px) {
     .modal-content {
       width: 100%;
+    }
+
+    .wp-block-gallery{
+      flex-direction: column;
+    }
+
+    h2{
+      font-size: 20px;
     }
 }
