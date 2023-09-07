@@ -7,19 +7,26 @@
     max-width: 100%;
     background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url(../images/dan-gold-4_jhDO54BYg-unsplash.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 #contactForm {
-    max-width: 600px;
+    max-width: 100%;
     justify-content: center;
     left: 50%;
     margin:40px;
     box-shadow: 0,5px 0,5px 0,5px black;
     background-color: white;
     padding: 25px;
- 
+}
 
+
+.message{
+    max-width: 95%;
+    box-sizing: border-box;
+}
+#messagebox textarea{
+    max-width: 95%;
 }
 
 
@@ -86,6 +93,7 @@ p{
 .contact-form{
     display: flex;
     flex-direction: row;
+    max-width: 80%;
 
 }
 
@@ -148,6 +156,38 @@ p{
 }
 
 
+@media only screen and (max-width: 500px) {
+
+    #contactForm{
+    margin: 5px;
+    padding: 10px;
+    }
+
+    #sendMessage{
+        width: 100px;
+        
+}
+
+#messagebox{
+    max-width: 200px;
+}
+}
+
+@media only screen and (max-width: 360px) {
+  #messagebox{
+    max-width: 150px;
+  }  
+}
+
+@media only screen and (max-width: 300px) {
+    #messagebox, 
+    #subject,
+    #email,
+    #LastName,
+    #FirstName
+    {
+      max-width: 50px;
+    }  
 
 
-
+  }

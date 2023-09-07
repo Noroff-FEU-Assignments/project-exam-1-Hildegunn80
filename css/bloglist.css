@@ -44,13 +44,24 @@ h1 {
 }
 
 .morePosts {
+    display: flex;
+    flex-direction: column;
     max-width: 150px;
-    height: 60px;
+    height: 70px;
     background-color: white;
-    align-self: center;
+    align-items: center;
     margin: 10px;
     padding: 10px;
 }
+.morePosts:hover {
+    background-color:rgb(239, 232, 232) ;   
+}
+.morePosts i {
+    margin:5px;   
+}
+
+
+
 
 .content-card-1 {
     display: flex;
