@@ -24,6 +24,4 @@ function createHTML(json) {
         `;
 }
 
-
-
 fetchJson();

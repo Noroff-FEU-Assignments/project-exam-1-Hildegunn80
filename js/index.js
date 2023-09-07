@@ -4,6 +4,7 @@ const arrowRight = document.getElementById("arrow-right");
 let index = 0;
 let json;
 let visibleCounnt = 4;
+const homePostUrl="http://10.20.21.208/Lowcarbheaven/wordpress/wp-json/wp/v2/posts?id=167&per_page=1";
 
 function goLeft() {
     index-=visibleCounnt-1;
@@ -77,6 +78,7 @@ function createHTML() {
 
 configureButtons();
 
+// fetch carousell
 fetchJson().then(
     function (result) {
         json = result;
@@ -84,5 +86,36 @@ fetchJson().then(
     }
 )
 
-// update carusell
+
+// update carousell
 window.addEventListener("resize", createHTML);
+
+async function fetchIntroductionJson() {
+    try {
+        console.log("fetch url: " + url);
+        const response = await fetch(url);
+        let json = await response.json();
+        createIntroductionHTML(json);
+    }
+    catch (error) {
+        console.log(error);
+        return null;
+    }
+}
+
+
+function createIntroductionHTML(json) {
+    const description = document.querySelector(".description");
+    const imagecontainer = document.querySelector(".imagecontainer");
+    console.log(json);
+    
+    description.innerHTML = `
+        <h1>${json[0].title.rendered}</h1>
+        <a href="bloglist.html"><button class="recipes" ><i class="fa-solid fa-utensils"></i>Go to recepies</button></a> 
+        `;    
+
+    let rendered = json[0].content.rendered.replace("localhost","10.20.21.208");
+    imagecontainer.innerHTML = `${rendered}`;
+}
+
+fetchIntroductionJson();
