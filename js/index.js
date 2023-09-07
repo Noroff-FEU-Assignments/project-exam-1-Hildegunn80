@@ -3,15 +3,16 @@ const arrowLeft = document.getElementById("arrow-left");
 const arrowRight = document.getElementById("arrow-right");
 let index = 0;
 let json;
+let visibleCounnt = 4;
 
 function goLeft() {
-    index-=4;
-    createHTML(index);
+    index-=visibleCounnt-1;
+    createHTML();
 }
 
 function goRight() {
-    index+=4;
-    createHTML(index);
+    index+=visibleCounnt+1;
+    createHTML();
 }
 
 function configureButtons() {
@@ -24,36 +25,26 @@ function createHTML() {
     const width = document.body.clientWidth;
 
     // boundary check
-    if(index < 0) {
-        index = 0;
-    }
-    let end;
+    if(index < 0) index = 0;
 
-    console.log(width);
-    if(width<=1070) {
-        console.log("less than 1070");
-        end=index+3
-        if(end >json.lenght){
-            end=json.lenght;
-            index =json.length-3;
-        }
-        console.log(width);
-        if(width<=700) {
-            console.log("less than 700");
-            end=index+2
-            if(end >json.lenght){
-                end=json.lenght;
-                index =json.length-1;
-            }
-        }
-
-    } else {
-        end = index + 4
-        if(end > json.length) {
-            end = json.length;
-            index = json.length -4;
-        }
+    console.log("page width: " + width);
+    if(width<800) {
+        visibleCounnt = 1;
+    } else if(width<1070) {
+        visibleCounnt = 2;
+    } else if(width<1300) {
+        visibleCounnt = 3;
+    } else if(width >1300) {
+        visibleCounnt = 4;
     }
+
+    //console.log("Visible count: " + visibleCounnt);
+    let end = index + visibleCounnt
+    if(end > json.length) {
+        end = json.length;
+        index = json.length - visibleCounnt;
+    }
+    //console.log("render start: " + index +", end: " + end);
 
     container.innerHTML = "";
     for (let i = index; i < end; i++) {
@@ -61,8 +52,11 @@ function createHTML() {
 
         let featuredmedia = json[i]._embedded['wp:featuredmedia'];
 
+        // show only valid images.
         if (typeof featuredmedia == "undefined") {
-            console.log("missing featuredmedia, skipping");
+            //console.log("missing featuredmedia, skipping");
+            end++;
+            if(end > json.length) end = json.length;
             continue;
         }
 
@@ -89,3 +83,6 @@ fetchJson().then(
         createHTML();
     }
 )
+
+// update carusell
+window.addEventListener("resize", createHTML);

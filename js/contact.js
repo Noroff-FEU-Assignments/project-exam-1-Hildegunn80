@@ -21,8 +21,6 @@ function validateForm() {
     try {
         event.preventDefault();
 
-        dsgfsdfgsdfg();
-
         let success = true;
         if(isLenghtValid(firstName.value,5)===true) {
             firstnameError.style.display ="none"
@@ -37,7 +35,6 @@ function validateForm() {
             success = false;
             lastNameError.style.display ="block"
         }
-
 
         if(isLenghtValid(subject.value,15)===true) {
             subjectError.style.display ="none"
@@ -83,8 +80,6 @@ function createHtmlError(error) {
                             `;
 
 }   
-
-
 
 
 form.addEventListener("submit", validateForm );
