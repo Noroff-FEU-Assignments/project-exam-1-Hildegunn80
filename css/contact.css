@@ -11,13 +11,12 @@
 }
 
 #contactForm {
-    border: 10px solid #a17caa;
     max-width: 600px;
     justify-content: center;
     left: 50%;
     margin:40px;
     box-shadow: 0,5px 0,5px 0,5px black;
-    background-color: #f5fff3;
+    background-color: white;
     padding: 25px;
  
 
@@ -26,7 +25,7 @@
 
 .banner{
     margin: 0px;
-    background-color: #D9E0A7;
+    background-color:white;
     padding: 1px;
   }
 
@@ -39,15 +38,13 @@
     font-size: 40px;
  }
 
+ .titleerror h2 {
+    font-size: 20px;
+ }
 
-/*.boks-d form input[type=submit] {
-    border: none;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-
-}*/
+ .home h2{
+font-size: 15px;
+ }
 
 #mobileError{
     color: green;
@@ -69,16 +66,20 @@
 }
 
 .questions{
-    background-color: white;
+    background-color: orange;
     padding: 30px;
     margin: 20px;
-    border: yellow 8px dotted;
-    
+    border: white 8px dotted; 
 }
+
 h3{
     font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    letter-spacing: 4px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+}
+
+p{
+    font-size: 12px;
 }
 
 
@@ -134,7 +135,7 @@ h3{
 
 
 .mailStatus {
-    color: black;
+    color: var(--font-color);
     background-color:lightblue;
     border-radius: 5px;
     border: solid 1px black;

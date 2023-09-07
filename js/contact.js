@@ -22,7 +22,7 @@ function validateForm() {
         event.preventDefault();
 
         dsgfsdfgsdfg();
-        
+
         let success = true;
         if(isLenghtValid(firstName.value,5)===true) {
             firstnameError.style.display ="none"
@@ -75,15 +75,13 @@ function createHtmlError(error) {
     console.log("Exception: " + error);
     document.body.style.backgroundColor = "white";
     
-    errorContainer.innerHTML = `<div class="title"><h1>OPS 404 ERROR.....</h1></div>
-                            <img src="/images/404.webp" height="200" style="max-width: 240px">
+    errorContainer.innerHTML = `<div class="titleerror"><h2>OPS 404 ERROR....</h2></div>
+                            <img src="/images/404.webp" height="180" style="max-width: 230px">
                             <div class="details-date">An error occurred processing data</div>
                             
-                            <div class="home"><a href="index.html"><h1>Return to home</h1></a></div>
+                            <div class="home"><a href="index.html"><h2>Return to home</h2></a></div>
                             `;
-    
-    const title = document.querySelector(".title");
-    title.style.color = "black";
+
 }   
 
 

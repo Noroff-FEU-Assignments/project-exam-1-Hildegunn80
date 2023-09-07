@@ -28,6 +28,7 @@
 .wp-block-gallery{
   display: flex;
   align-items: center;
+  margin-bottom: 5px;
 }
 .wp-block-image{
   max-width: 500px;
@@ -37,10 +38,18 @@
 
 .blogpostcontainer{
   max-width: 1000px;
-  display: flex;
-  
-  
+  display: flex;  
 }
+
+.blogpostcontainer p, h2, h3, ul{
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+
+
+
 .wrapper{
   display: flex;
   flex-direction: column;
@@ -73,11 +82,22 @@ h1{
 }
 
 h2{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 25px;
   text-align: left;
 }
 
+h3{
+  font-size: 20px;
+}
+
+p{
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.wrapper li{
+  font-family:'Poppins', sans-serif;
+}
 /* modal small screen */
 @media only screen and (max-width: 800px) {
     .modal-content {

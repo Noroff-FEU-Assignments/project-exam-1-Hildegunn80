@@ -51,9 +51,8 @@ function createHTML() {
                                                 <h2>${json[i].title.rendered}</h2>
                                                 <p>${"Date:"+json[i].date}</p>
                                                 ${json[i].excerpt.rendered}
-                                            </div>
-                                            <button class="readmore"><i class="fa-solid fa-utensils"></i>Read more</button>
-                                        </a>
+                                        </div>
+                                                <a class="readmore" href ="blogpost.html?id=${json[i].id}">Read more<i class="fas fa-long-arrow-alt-right"></i></a>
                                     </section>
                                     `;
     }

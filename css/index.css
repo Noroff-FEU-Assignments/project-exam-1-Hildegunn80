@@ -71,8 +71,8 @@
     letter-spacing: 1px;
     color: var(--font-color);
     font-size: 15px;
-    background-color: #DCBFF6;
-    border: #FFEDCC 1px; 
+    background-color: white;
+    border: whitesmoke solid 2px; 
     margin: 7px;
     
 }
@@ -102,7 +102,7 @@
     align-self: center;
     font-size: 50px;
     padding: 10px;
-    color: #250656;
+    color:var(--font-color);
 }
 
 .description {

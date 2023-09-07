@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
 }
-
+ 
 .blogcontainer {
     max-width: 1550px;
     align-content: center;
@@ -14,11 +14,12 @@
 
 .blogPostWrapper {
     display: flex;
-    margin: 5px;
-    background-color: lightblue;
+    flex-direction: column;
+    border:lightblue 2px solid;
+    background-color: #ddeef2;
 }
-a {
-    padding: 5px;    
+.blogcontainer a {
+    padding: 5px; 
 }
 
 .banner {
@@ -45,9 +46,10 @@ h1 {
 .morePosts {
     max-width: 150px;
     height: 60px;
-    background-color: orange;
+    background-color: white;
     align-self: center;
     margin: 10px;
+    padding: 10px;
 }
 
 .content-card-1 {
@@ -57,38 +59,35 @@ h1 {
 .text-content{
     padding: 5px;
     margin-top: 0px;
-    display:flex;
     flex-direction: column;
     background-color: #ddeef2;
-    color: #0e2d33;
+    color: var(--font-color);
     max-width:500px;
+    display: flex;
 }
 
 #image {
     max-width:500px;
-    margin-bottom: 0px;
+    margin-bottom: auto;
 }
 
 
 .readmore{
-    width: 170px;
-    height: 50px;
-    font-family:'Montserrat', sans-serif;
+    font-family:'Poppins', sans-serif;
     letter-spacing: 1px;
     color: var(--font-color);
     font-size: 20px;
-    background-color: #86c4d2;
-    border: #FFEDCC 1px; 
-    margin: 7px;
-    justify-content: center;
+    text-align: right;
+    color: var(--font-color);
+    margin-right:15px;
 }
 
 .readmore:hover{
-    background-color: #98ccd9;
+    color: rgb(101, 93, 93);
 }
 
 .readmore i{
-    margin: 10px;
+    margin: 5px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -99,5 +98,12 @@ h1 {
 @media only screen and (max-width: 500px) {
     .blogcontainer {
         grid-template-columns: 1fr;
+    }
+
+    .blogcontainer h2{
+        font-size: 20px;
+    }
+    .blogcontainer p{
+        font-size: 15px;
     }
 }

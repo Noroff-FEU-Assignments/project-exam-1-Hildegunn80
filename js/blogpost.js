@@ -26,7 +26,6 @@ async function fetchPost() {
 fetchPost();
 
 function createHTML(json) {
-
     blogpostContainer.innerHTML = "";
     
     console.log("Create html Title: " + json.title.rendered);
@@ -40,10 +39,11 @@ function createHTML(json) {
     let rendered = json.content.rendered.replace(/localhost/g,"10.20.21.208");  // workaround dev
     
     blogpostContainer.innerHTML += `
-                                <div>${rendered}</div>
+                                <div class="blogpost">${rendered}</div>
 
                                 <div id="imageModal" class="modal">
                                     <img class="modal-content" id="idImageModal">
+                                    <p id="shortenedText"></p>
                                 </div>
                                 `;
     banner.innerHTML += `
