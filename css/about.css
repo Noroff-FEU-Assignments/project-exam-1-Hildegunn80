@@ -38,6 +38,12 @@
     margin-top: 20px;
     color: var(--font-color);
   }
+
+  .header h2 {
+    margin:0px;
+  }
+
+  
   h2{
     font-size: 40px;
     font-family: 'Caveat', cursive;
