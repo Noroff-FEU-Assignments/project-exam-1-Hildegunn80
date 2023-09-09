@@ -28,7 +28,7 @@ function createHTML() {
     // boundary check
     if(index < 0) index = 0;
 
-    console.log("page width: " + width);
+    //console.log("page width: " + width);
     if(width<600) {
         visibleCounnt = 1;
     } else if(width<1070) {
