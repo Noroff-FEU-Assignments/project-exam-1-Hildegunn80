@@ -1,4 +1,4 @@
-const container = document.querySelector(".latest-posts");
+const latestPosts = document.querySelector(".latest-posts");
 const arrowLeft = document.getElementById("arrow-left");
 const arrowRight = document.getElementById("arrow-right");
 let index = 0;
@@ -29,7 +29,7 @@ function createHTML() {
     if(index < 0) index = 0;
 
     console.log("page width: " + width);
-    if(width<800) {
+    if(width<600) {
         visibleCounnt = 1;
     } else if(width<1070) {
         visibleCounnt = 2;
@@ -47,7 +47,7 @@ function createHTML() {
     }
     //console.log("render start: " + index +", end: " + end);
 
-    container.innerHTML = "";
+    latestPosts.innerHTML = "";
     for (let i = index; i < end; i++) {
         //console.log("Title: " + json[i].title.rendered);
 
@@ -55,7 +55,6 @@ function createHTML() {
 
         // show only valid images.
         if (typeof featuredmedia == "undefined") {
-            //console.log("missing featuredmedia, skipping");
             end++;
             if(end > json.length) end = json.length;
             continue;
@@ -63,9 +62,8 @@ function createHTML() {
 
         let source_url = featuredmedia['0'].source_url;
         source_url = source_url.replace("localhost","10.20.21.208");    // workaround
-        //console.log ("url: "+source_url);
-
-        container.innerHTML += `<section class="carousel">
+        
+        latestPosts.innerHTML += `<section class="carousel">
                                     <div class"content-card-1">
                                         <div class="article"><h2>${json[i].title.rendered}</h2>
                                         <img src="${source_url}"></div>
@@ -73,6 +71,7 @@ function createHTML() {
                                     </div>
                                 </section>
                                 `;
+
     }
 }
 
@@ -107,7 +106,7 @@ async function fetchIntroductionJson() {
 function createIntroductionHTML(json) {
     const description = document.querySelector(".description");
     const imagecontainer = document.querySelector(".imagecontainer");
-    console.log(json);
+    //console.log(json);
     
     description.innerHTML = `
         <h1>${json[0].title.rendered}</h1>

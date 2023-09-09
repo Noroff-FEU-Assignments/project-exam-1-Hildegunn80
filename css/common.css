@@ -4,14 +4,15 @@
     --color-bg:rgb(238, 247, 249);
     --font-color:black;
     --header:#cce6ec;
-    --footer:rgb(221, 237, 243);
+    --footer:#ddedf3;
     --banner:rgb(221, 238, 242);
 
     --fontParagraphs:'Poppins', sans-serif;
     --fontButton:'Montserrat', sans-serif;
     --fontH1Banner:'Caveat', cursive;
 }
-p{
+
+p {
     font-size: 20px;
     letter-spacing: 1px;
     font-family:var(--fontParagraphs);
@@ -28,7 +29,7 @@ body {
     background-color: var(--color-bg);
 }
 
-.banner h1{
+.banner h1 {
     margin: 0px;
     background-color:var(--banner);
     padding: 15px;

@@ -3,12 +3,10 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
-    border: 3px solid lightgray;
-    padding: 10px;  
-    
+    padding: 10px;    
 }
 
-.wp-image-168{
+.wp-image-168 {
     width: auto;
     height: auto;
 }
@@ -16,7 +14,7 @@
 .article {
     display: flex;
     flex-direction: column;
-    box-shadow: 9px 4px 4px lightgray;
+    padding-top: 30px;
 }
 
 .article h2 {
@@ -29,13 +27,21 @@
 .carousel {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    background-color: #BCC9CF;
+}
+
+.carousel a {
+    padding: 0px;
+    margin: 0px;
 }
 
 .wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: pink;
+    justify-content: center;
+    background-color:  #ddedf3;
 }
 
 #latest-posts-heading{
@@ -52,6 +58,7 @@
     margin: 10px;
     color: black;
 }
+
 #arrow-left i:hover, #arrow-right i:hover{
     color: #226074;
 }
@@ -60,7 +67,8 @@
     border: none;
     background-color:transparent;
 }
-.introduction{
+
+.introduction {
     display: flex;
     flex-direction: row;
     background-color: #ffa500;
@@ -68,7 +76,7 @@
     padding-left: 50px;
 }
 
-.readmore{
+.readmore {
     width: 150px;
     height: 50px;
     font-family:var(--fontButton);
@@ -77,31 +85,30 @@
     font-size: 15px;
     background-color: white;
     border: whitesmoke solid 2px; 
-    margin: 7px;
-    
+    margin: 7px;    
 }
-.readmore:hover{
+
+.readmore:hover {
     background-color: #a9d5df;
 }
 
-.readmore i{
+.readmore i {
     margin:10px;
 }
 
-.wp-blockimage{
+.wp-blockimage {
     max-width: 80%;
 }
-.imagecontainer{
+.imagecontainer {
     max-width:100%;
 }
-.description{
+
+.description {
     background-color:#FFB733;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-
-
 
 .description h1 {
     font-size: 25px;
@@ -109,7 +116,7 @@
     align-self: center;
     font-size: 50px;
     padding: 10px;
-    color:var(--font-color);
+    color: var(--font-color);
 }
 
 .description {
@@ -117,84 +124,73 @@
     font-size: 20px;
 }
 
-.description p{
+.description p {
     text-align: left;
 }
 
 
-.recipes:hover{
+.recipes:hover {
     background-color: #cbe4ed;
 }
 
 @media only screen and (max-width:1270px) {
     .article h2 {
-        font-size: 12px;
+        font-size: 20px;
     }
-    }
-
+}
 
 @media only screen and (max-width:1200px) {
-.description h2{
-    font-size: 30px;
+    .description h2 {
+        font-size: 30px;
+    }
+
+    .description p {
+        display: none;
+    }
 }
-.description p{
-    display: none;
-}
-}
+
 @media only screen and (max-width:790px) {
- .description h1{
-        font-size: 25px;
+    .description h1 {
         background-color: orange;
     }
-    .description{
+
+    .description {
         background-color: orange;
     }
-    .wrapper{
-        align-items: center;
-        flex-direction: row;
-    }
 
-
-    .introduction{
+    .introduction {
         flex-direction: column;
         padding: 0px;
-
     }
-    .carousel{
-        display: flex;
+
+    .imagecontainer {
+        display: none;
+    }
+
+    .recipes {
+        max-width: 250px;
+        font-size: 14px;
+    }
+
+    #latest-posts-heading {
+        font-size: 28px;
+    }
+
+    .readmore {
+        justify-self: center;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .wrapper {
         flex-direction: column;
-        align-items: center;
-    }
-   
-.imagecontainer{
-    display: none;
-}
-
-.recipes{
-    max-width: 250px;
-    font-size: 14px;
-}
-#latest-posts-heading{
-    font-size: 28px;
-}
-.latest-posts{
-    display: flex;
-    border:none;
-}
-#arrow-left, #arrow-right {
-    color: black;
-}
-
-.readmore{
-    justify-self: center;
-}
-
-
     }
 
+    .description h1 {        
+        font-size: 35px;
+    }
 
-    @media only screen and (max-width:400px) {
-        .wrapper{
-            max-width: 300px;
-            
-           }}
+    .article h2 {
+        font-size: 12px;
+    }
+}
