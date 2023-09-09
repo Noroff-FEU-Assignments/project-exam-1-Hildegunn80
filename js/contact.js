@@ -44,7 +44,7 @@ function validateForm() {
         }
 
         if(isLenghtValid(messageBox.value,25)===true) {
-            subjectError.style.display ="none"
+            messageError.style.display ="none"
         } else {
             success = false;
             messageError.style.display ="block"

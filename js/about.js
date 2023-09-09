@@ -19,7 +19,6 @@ function createHTML(json) {
     console.log(json);
     
     container.innerHTML = ` 
-        <h1>${json[0].title.rendered} </h1>
         <p>${json[0].content.rendered}</p>
         `;
 }

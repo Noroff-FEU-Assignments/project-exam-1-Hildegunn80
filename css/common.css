@@ -6,11 +6,15 @@
     --header:#cce6ec;
     --footer:rgb(221, 237, 243);
     --banner:rgb(221, 238, 242);
+
+    --fontParagraphs:'Poppins', sans-serif;
+    --fontButton:'Montserrat', sans-serif;
+    --fontH1Banner:'Caveat', cursive;
 }
 p{
     font-size: 20px;
     letter-spacing: 1px;
-    font-family:'Poppins', sans-serif;
+    font-family:var(--fontParagraphs);
     font-weight: bold;
     color: var(--font-color);
 }
@@ -23,6 +27,16 @@ body {
     color:var(--font-color);
     background-color: var(--color-bg);
 }
+
+.banner h1{
+    margin: 0px;
+    background-color:var(--banner);
+    padding: 15px;
+    font-family: var(--fontH1Banner);
+    font-size: 40px;
+    text-align: center;
+    color: var(--font-color);
+  }
 
 html {
     height: 100%;
@@ -63,8 +77,8 @@ a {
 }
 
 
-img {
-    width: 100%;
+ img {
+    max-width: 100%;
 }
 
 .link a {
@@ -78,7 +92,7 @@ img {
 .recipes{
     max-width: 300px;
     max-height: 50px;
-    font-family:'Montserrat', sans-serif;
+    font-family:var(--fontButton);
     letter-spacing: 1px;
     color: var(--font-color);
     font-size: 20px;

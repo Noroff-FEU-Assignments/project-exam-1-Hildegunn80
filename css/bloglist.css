@@ -22,18 +22,6 @@
     padding: 5px; 
 }
 
-.banner {
-    margin: 0px;
-    background-color:var(--banner);
-    padding: 5px;
-}
-
-h1 {
-    font-size: 40px;
-    text-align: center;
-    font-family: 'Caveat', cursive;
-    font-weight: bold;
-}
 
 .blogcontainer h2 {
     font-size: 25px;
@@ -61,8 +49,6 @@ h1 {
 }
 
 
-
-
 .content-card-1 {
     display: flex;
 }
@@ -84,7 +70,7 @@ h1 {
 
 
 .readmore{
-    font-family:'Poppins', sans-serif;
+    font-family:var(--fontButton);
     letter-spacing: 1px;
     color: var(--font-color);
     font-size: 20px;

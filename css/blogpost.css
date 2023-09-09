@@ -48,8 +48,6 @@
 }
 
 
-
-
 .wrapper{
   display: flex;
   flex-direction: column;
@@ -68,18 +66,7 @@
   to {transform:scale(1)}
 }
 
-.banner{
-    margin: 0px;
-    background-color: var(--banner);
-    padding: 1px;
-}
 
-h1{
-  font-family: 'Caveat', cursive;
-  font-size: 40px;
-  text-align: center;
-  
-}
 
 h2{
   font-size: 25px;

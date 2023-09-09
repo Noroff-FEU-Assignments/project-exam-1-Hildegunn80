@@ -8,7 +8,10 @@
     
 }
 
-
+.wp-image-168{
+    width: auto;
+    height: auto;
+}
 
 .article {
     display: flex;
@@ -32,6 +35,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    background-color: pink;
 }
 
 #latest-posts-heading{
@@ -67,7 +71,7 @@
 .readmore{
     width: 150px;
     height: 50px;
-    font-family:'Montserrat', sans-serif;
+    font-family:var(--fontButton);
     letter-spacing: 1px;
     color: var(--font-color);
     font-size: 15px;
@@ -84,8 +88,11 @@
     margin:10px;
 }
 
+.wp-blockimage{
+    max-width: 80%;
+}
 .imagecontainer{
-    width:100%;
+    max-width:100%;
 }
 .description{
     background-color:#FFB733;
@@ -134,7 +141,7 @@
     display: none;
 }
 }
-@media only screen and (max-width:700px) {
+@media only screen and (max-width:790px) {
  .description h1{
         font-size: 25px;
         background-color: orange;
@@ -142,6 +149,11 @@
     .description{
         background-color: orange;
     }
+    .wrapper{
+        align-items: center;
+        flex-direction: row;
+    }
+
 
     .introduction{
         flex-direction: column;
@@ -152,10 +164,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    .latest-posts{
-        flex-direction: row;
     }
    
 .imagecontainer{
@@ -170,13 +178,11 @@
     font-size: 28px;
 }
 .latest-posts{
-    display: block;
+    display: flex;
     border:none;
 }
 #arrow-left, #arrow-right {
-    margin: 4px;
     color: black;
-    max-width: 7px;
 }
 
 .readmore{
@@ -187,4 +193,8 @@
     }
 
 
-
+    @media only screen and (max-width:400px) {
+        .wrapper{
+            max-width: 300px;
+            
+           }}

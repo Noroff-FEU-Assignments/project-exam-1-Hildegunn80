@@ -57,17 +57,6 @@
     font-weight: lighter;
   }
   
-  .banner{
-    margin: 0px;
-    background-color:white;
-    padding: 1px;
-  }
-
-  h1{
-    font-size: 30px;
-    text-align: center;  
-    color: rgb(248, 210, 248);
-  }
   .wrapper{
     display: flex;
     align-items: center;
@@ -82,7 +71,7 @@
 
   @media only screen and (max-width: 500px) {
      h2{
-        font-size: 20px;
+        font-size: 25px;
     }
     .blogcontainer p{
         font-size: 15px;

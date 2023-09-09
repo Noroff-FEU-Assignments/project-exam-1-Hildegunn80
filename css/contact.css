@@ -29,18 +29,6 @@
     max-width: 95%;
 }
 
-
-.banner{
-    margin: 0px;
-    background-color:white;
-    padding: 1px;
-  }
-
-  h1{
-    font-family: 'Caveat', cursive;
-    font-size: 40px;
-    text-align: center;
- }
  h2{
     font-size: 40px;
  }
@@ -66,10 +54,13 @@ font-size: 15px;
     margin: 30px 0px 30px 0px;
     display: block;
     border-radius: 20px;
+    font-family: var(--fontButton);
+    font-size: 15px;
+    font-weight: bold;
 }
 
 #sendMessage:hover{
-    background-color:#E4E9C0;
+    background-color: #52b41e;
 }
 
 .questions{
@@ -83,6 +74,11 @@ h3{
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.questions p{
+    font-size: 16px;
 }
 
 p{
@@ -122,20 +118,31 @@ p{
 #form_validated {
     display: none;
     position: absolute;
-    left: 25%;
+    left: 30%;
     top: 75%;
-    padding: 20px;
+    padding: 40px;
     z-index: 8;
     border-radius: 2px;
     text-align:center;
-    background-color:yellow;
-    color: white;
-    border: 2px white ;
+    background-color:lightblue;
+    color:white;
+    border:solid 7px rgb(207, 240, 252) ;
 } 
+#form_validated i{
+    margin-bottom: 10px;
+
+}
+
+.close-message{
+    margin-top: 10px;
+    font-size: 15px;
+    font-family: var(--fontButton);
+}
 
 /* form valid*/
 .form-error,
-.email-error {
+.email-error, 
+.error {
     color: red;
     font-size: small;
 }
@@ -164,7 +171,7 @@ p{
     }
 
     #sendMessage{
-        width: 100px;
+    max-width: 200px;
         
 }
 
@@ -189,5 +196,8 @@ p{
       max-width: 50px;
     }  
 
-
+    #sendMessage{
+        width: 150px;
+        
+}
   }
