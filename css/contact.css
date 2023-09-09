@@ -1,5 +1,5 @@
 
-.wrapper{
+.wrapper {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -8,6 +8,7 @@
     background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url(../images/dan-gold-4_jhDO54BYg-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    flex: 1 0 auto;
 }
 
 #contactForm {
@@ -20,16 +21,16 @@
     padding: 25px;
 }
 
-
-.message{
+.message {
     max-width: 95%;
     box-sizing: border-box;
 }
-#messagebox textarea{
+
+#messagebox textarea {
     max-width: 95%;
 }
 
- h2{
+ h2 {
     font-size: 40px;
  }
 
@@ -37,16 +38,16 @@
     font-size: 20px;
  }
 
- .home h2{
+ .home h2 {
 font-size: 15px;
  }
 
-#mobileError{
+#mobileError {
     color: green;
     display: none;
 }
 
-#sendMessage{
+#sendMessage {
     background-color: #5dcd21;
     border: solid #DBEDF3 1px;
     width: 350px;
@@ -59,38 +60,37 @@ font-size: 15px;
     font-weight: bold;
 }
 
-#sendMessage:hover{
+#sendMessage:hover {
     background-color: #52b41e;
 }
 
-.questions{
+.questions {
     background-color: orange;
     padding: 30px;
     margin: 20px;
     border: white 8px dotted; 
 }
 
-h3{
+h3 {
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
     font-size: 20px;
 }
 
-.questions p{
+.questions p {
     font-size: 16px;
 }
 
-p{
+p {
     font-size: 12px;
 }
 
 
-.contact-form{
+.contact-form {
     display: flex;
     flex-direction: row;
     max-width: 80%;
-
 }
 
 .form-validated {
@@ -107,13 +107,12 @@ p{
     border: 2px white ;
 } 
 
-.form-validated i{
+.form-validated i {
     display: block;
     font-weight: bold;
     color: green;
     margin: 10px;
 }
-
 
 #form_validated {
     display: none;
@@ -141,14 +140,12 @@ p{
 
 /* form valid*/
 .form-error,
-.email-error, 
+.email-error,
+.subject-error,
 .error {
     color: red;
     font-size: small;
 }
-
-
-
 .mailStatus {
     color: var(--font-color);
     background-color:lightblue;
@@ -159,31 +156,28 @@ p{
     padding: 20px;
     width: 200px;
     text-align: center;
-
 }
 
 
 @media only screen and (max-width: 500px) {
-
     #contactForm{
-    margin: 5px;
-    padding: 10px;
+        margin: 5px;
+        padding: 10px;
     }
 
     #sendMessage{
-    max-width: 200px;
-        
-}
+        max-width: 200px;        
+    }
 
-#messagebox{
-    max-width: 200px;
-}
+    #messagebox{
+        max-width: 200px;
+    }
 }
 
 @media only screen and (max-width: 360px) {
-  #messagebox{
-    max-width: 150px;
-  }  
+    #messagebox{
+        max-width: 150px;
+    }  
 }
 
 @media only screen and (max-width: 300px) {
@@ -197,7 +191,6 @@ p{
     }  
 
     #sendMessage{
-        width: 150px;
-        
+        width: 150px;        
+    }
 }
-  }
