@@ -37,7 +37,7 @@ function createHTML(json) {
     }
 
     blogpostContainer.innerHTML += `
-                                <div class="blogpost">${rendered}</div>
+                                <div class="blogpost">${json.content.rendered}</div>
 
                                 <div id="imageModal" class="modal">
                                     <img class="modal-content" id="idImageModal">
