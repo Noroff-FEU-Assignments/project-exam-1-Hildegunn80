@@ -4,7 +4,7 @@ const arrowRight = document.getElementById("arrow-right");
 let index = 0;
 let json;
 let visibleCounnt = 4;
-const homePostUrl="http://10.20.21.208/Lowcarbheaven/wordpress/wp-json/wp/v2/posts?id=167&per_page=1";
+const homePostUrl="http://lowcarb.not.nu/backend/wp-json/wp/v2/posts?id=167&per_page=1";
 
 function goLeft() {
     index-=visibleCounnt-1;
@@ -61,7 +61,6 @@ function createHTML() {
         }
 
         let source_url = featuredmedia['0'].source_url;
-        source_url = source_url.replace("localhost","10.20.21.208");    // workaround
         
         latestPosts.innerHTML += `<section class="carousel">
                                     <div class"content-card-1">
@@ -106,15 +105,13 @@ async function fetchIntroductionJson() {
 function createIntroductionHTML(json) {
     const description = document.querySelector(".description");
     const imagecontainer = document.querySelector(".imagecontainer");
-    //console.log(json);
     
     description.innerHTML = `
         <h1>${json[0].title.rendered}</h1>
         <a href="bloglist.html"><button class="recipes" ><i class="fa-solid fa-utensils"></i>Go to recepies</button></a> 
         `;    
 
-    let rendered = json[0].content.rendered.replace("localhost","10.20.21.208");
-    imagecontainer.innerHTML = `${rendered}`;
+    imagecontainer.innerHTML = `${json[0].content.rendered}`;
 }
 
 fetchIntroductionJson();

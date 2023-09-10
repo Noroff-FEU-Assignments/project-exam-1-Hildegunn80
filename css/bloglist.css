@@ -18,10 +18,10 @@
     border:lightblue 2px solid;
     background-color: #ddeef2;
 }
+
 .blogcontainer a {
     padding: 5px; 
 }
-
 
 .blogcontainer h2 {
     font-size: 25px;
@@ -68,7 +68,6 @@
     margin-bottom: auto;
 }
 
-
 .readmore{
     font-family:var(--fontButton);
     letter-spacing: 1px;
@@ -79,7 +78,7 @@
     margin-right:15px;
 }
 
-.readmore:hover{
+.readmore:hover {
     color: rgb(101, 93, 93);
 }
 

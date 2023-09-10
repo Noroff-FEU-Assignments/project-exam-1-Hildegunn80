@@ -1,5 +1,5 @@
 const container = document.querySelector(".about-container");
-const url = "http://10.20.21.208/Lowcarbheaven/wordpress/wp-json/wp/v2/pages?_embed/id=149";
+const url = "http://lowcarb.not.nu/backend/wp-json/wp/v2/pages?_embed/id=149";
 
 async function fetchJson() {
     try {

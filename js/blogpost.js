@@ -4,7 +4,7 @@ const queryString =document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-const postUrl = "http://10.20.21.208/Lowcarbheaven/wordpress/wp-json/wp/v2/posts/"+ id +"?_embed";
+const postUrl = "http://lowcarb.not.nu/backend/wp-json/wp/v2/posts/"+ id +"?_embed";
 
 async function fetchPost() {
     try {
@@ -36,8 +36,6 @@ function createHTML(json) {
         throw new Error("missing wp:featuredmedia");
     }
 
-    let rendered = json.content.rendered.replace(/localhost/g,"10.20.21.208");  // workaround dev
-    
     blogpostContainer.innerHTML += `
                                 <div class="blogpost">${rendered}</div>
 
