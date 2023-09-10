@@ -16,7 +16,6 @@
   }
 
 
-
   .recipes:hover{
     background-color: #ddd7e7;
   }
@@ -93,6 +92,10 @@
 
     }
   
+   .recipes{
+    font-size: 15px;
+    padding: 7px;
+   } 
 
     .wp-image-188{
         width: auto;
