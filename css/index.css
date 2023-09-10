@@ -130,7 +130,7 @@
 
 
 .recipes:hover {
-    background-color: #cbe4ed;
+    background-color: var(--lightBlue);
 }
 
 @media only screen and (max-width:1270px) {

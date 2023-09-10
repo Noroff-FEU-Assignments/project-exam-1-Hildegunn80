@@ -42,13 +42,9 @@
 font-size: 15px;
  }
 
-#mobileError {
-    color: green;
-    display: none;
-}
 
 #sendMessage {
-    background-color: #5dcd21;
+    background-color: var(--buttonGreen);
     border: solid #DBEDF3 1px;
     width: 350px;
     height: 50px;
@@ -61,7 +57,7 @@ font-size: 15px;
 }
 
 #sendMessage:hover {
-    background-color: #52b41e;
+    background-color: var(--buttonGreenHover);
 }
 
 .questions {
@@ -123,7 +119,7 @@ p {
     z-index: 8;
     border-radius: 2px;
     text-align:center;
-    background-color:#add8e6;
+    background-color:var(--lightBlue);
     color:white;
     border:solid 7px rgb(207, 240, 252) ;
 } 
@@ -148,7 +144,7 @@ p {
 }
 .mailStatus {
     color: var(--font-color);
-    background-color:lightblue;
+    background-color:var(--lightBlue);
     border-radius: 5px;
     border: solid 1px black;
     position: absolute;

@@ -118,3 +118,12 @@ p{
   }
 }
 
+@media only screen and (max-width: 360px) {
+
+  .wp-block-gallery{
+    height:auto;
+    width: auto;
+    border-radius: 50%;
+  }
+}
+
