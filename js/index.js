@@ -4,7 +4,7 @@ const arrowRight = document.getElementById("arrow-right");
 let index = 0;
 let json;
 let visibleCounnt = 4;
-const homePostUrl="http://10.20.21.208/Lowcarbheaven/wordpress/wp-json/wp/v2/posts?id=167&per_page=1";
+const homePostUrl="http://lowcarb-api.not.nu/wp-json/wp/v2/posts?id=167&per_page=1";
 
 function goLeft() {
     index-=visibleCounnt-1;

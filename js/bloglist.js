@@ -1,6 +1,7 @@
 
 const blogContainer = document.querySelector(".blogcontainer");
 const morePosts = document.getElementById("more-posts");
+
 let json;
 let count = 10;
 
