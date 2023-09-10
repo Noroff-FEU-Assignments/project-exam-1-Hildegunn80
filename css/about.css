@@ -4,7 +4,7 @@
     justify-self: center;
   }
   .recipes{
-    background-color: lightblue;
+    background-color: #add8e6;
     font-style: italic;
     border: 2px solid #572957;
   }
@@ -81,5 +81,14 @@
     }
     .blogcontainer p{
         font-size: 15px;
+
     }
-}
+  
+
+    .wp-image-188{
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        }
+    }
+

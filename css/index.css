@@ -71,7 +71,7 @@
 .introduction {
     display: flex;
     flex-direction: row;
-    background-color: #ffa500;
+    background-color: var(--orange);
     align-items: center;
     padding-left: 50px;
 }
@@ -89,7 +89,7 @@
 }
 
 .readmore:hover {
-    background-color: #a9d5df;
+    background-color: var(--lightBlue);
 }
 
 .readmore i {
@@ -104,7 +104,7 @@
 }
 
 .description {
-    background-color:#FFB733;
+    background-color:var(--lighterOrange);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -151,11 +151,11 @@
 
 @media only screen and (max-width:790px) {
     .description h1 {
-        background-color: orange;
+        background-color: var(--lighterOrange);
     }
 
     .description {
-        background-color: orange;
+        background-color: var(--orange);
     }
 
     .introduction {

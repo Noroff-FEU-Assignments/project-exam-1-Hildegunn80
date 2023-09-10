@@ -3,9 +3,11 @@
 
     --color-bg:rgb(238, 247, 249);
     --font-color:black;
-    --header:#cce6ec;
-    --footer:#ddedf3;
+    --headerandFooter:#cce6ec;
     --banner:rgb(221, 238, 242);
+    --orange:#ffa500;
+    --lighterOrange:#FFB733;
+    --lightBlue:#add8e6;
 
     --fontParagraphs:'Poppins', sans-serif;
     --fontButton:'Montserrat', sans-serif;
@@ -41,7 +43,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color:var(--header);
+    background-color:var(--headerandFooter);
     color: var(--font-color);
     align-items: center; 
     height: 100px;
@@ -129,7 +131,7 @@ a {
 .header {
     display: flex;
     grid-gap: 10px;
-    background-color:var(--header);
+    background-color:var(--headerandFooter);
     align-items: center;
     min-height: 100px;
 }
