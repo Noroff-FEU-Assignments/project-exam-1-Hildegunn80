@@ -61,7 +61,6 @@ function createHTML() {
         }
 
         let source_url = featuredmedia['0'].source_url;
-        source_url = source_url.replace("localhost","10.20.21.208");    // workaround
         
         latestPosts.innerHTML += `<section class="carousel">
                                     <div class"content-card-1">
@@ -113,7 +112,6 @@ function createIntroductionHTML(json) {
         <a href="bloglist.html"><button class="recipes" ><i class="fa-solid fa-utensils"></i>Go to recepies</button></a> 
         `;    
 
-    let rendered = json[0].content.rendered.replace("localhost","10.20.21.208");
     imagecontainer.innerHTML = `${rendered}`;
 }
 

@@ -42,7 +42,6 @@ function createHTML() {
         }
 
         let source_url = featuredmedia['0'].source_url;
-        source_url = source_url.replace("localhost","10.20.21.208");    // workaround
         //console.log ("url: "+source_url);
 
         blogContainer.innerHTML += `<section class="blogPostWrapper">

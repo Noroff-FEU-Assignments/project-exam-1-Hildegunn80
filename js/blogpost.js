@@ -36,8 +36,6 @@ function createHTML(json) {
         throw new Error("missing wp:featuredmedia");
     }
 
-    let rendered = json.content.rendered.replace(/localhost/g,"10.20.21.208");  // workaround dev
-    
     blogpostContainer.innerHTML += `
                                 <div class="blogpost">${rendered}</div>
 
