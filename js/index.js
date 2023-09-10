@@ -105,14 +105,13 @@ async function fetchIntroductionJson() {
 function createIntroductionHTML(json) {
     const description = document.querySelector(".description");
     const imagecontainer = document.querySelector(".imagecontainer");
-    //console.log(json);
     
     description.innerHTML = `
         <h1>${json[0].title.rendered}</h1>
         <a href="bloglist.html"><button class="recipes" ><i class="fa-solid fa-utensils"></i>Go to recepies</button></a> 
         `;    
 
-    imagecontainer.innerHTML = `${rendered}`;
+    imagecontainer.innerHTML = `${json[0].content.rendered}`;
 }
 
 fetchIntroductionJson();

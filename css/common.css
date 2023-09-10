@@ -1,6 +1,5 @@
 
 :root {
-
     --color-bg:rgb(238, 247, 249);
     --font-color:black;
     --headerandFooter:#cce6ec;
@@ -186,8 +185,8 @@ nav li {
     height: 100px;
     margin: -50px 0 0 -50px;
     border: 16px solid #65593f00;
-    border-top: 16px solid #ffffff;
-    border-bottom: 16px solid #ffffff;
+    border-top: 16px solid var(--orange);
+    border-bottom: 16px solid var(--orange);
     border-radius: 50%;
     animation: spin 2s linear infinite;
 }
