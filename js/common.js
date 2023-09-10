@@ -1,4 +1,4 @@
-const url = "http://lowcarb-api.not.nu/wp-json/wp/v2/posts?_embed&per_page=100";
+const url = "http://lowcarb.not.nu/backend/wp-json/wp/v2/posts?_embed&per_page=100";
 
 async function fetchJson() {
     try {
