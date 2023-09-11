@@ -79,8 +79,7 @@ function createHtmlError(error) {
                             <div class="home"><a href="index.html"><h2>Return to home</h2></a></div>
                             `;
 
-}   
-
+}
 
 form.addEventListener("submit", validateForm );
 buttonCloseMessage.addEventListener("click", closeMessage);
