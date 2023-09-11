@@ -9,9 +9,15 @@ configureButton();
 
 fetchJson().then(
     function (result) {
-        json = result;
-        createHTML();
-        enableSpinner(false);
+        try {
+            json = result;
+            createHTML();
+            enableSpinner(false);
+        }
+        catch(error) {
+            console.log("Exception in fetchJson() :" + error);
+            createHtmlError(error,".wrapper"); 
+        }
     }
 )
 
@@ -37,12 +43,11 @@ function createHTML() {
         let featuredmedia = json[i]._embedded['wp:featuredmedia'];
 
         if (typeof featuredmedia == "undefined") {
-            console.log("missing featuredmedia, skipping");
+            //console.log("missing featuredmedia, skipping");
             continue;
         }
 
         let source_url = featuredmedia['0'].source_url;
-        //console.log ("url: "+source_url);
 
         blogContainer.innerHTML += `<section class="blogPostWrapper">
                                         <a href="blogpost.html?id=${json[i].id}">

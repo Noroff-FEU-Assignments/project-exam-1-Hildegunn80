@@ -4,6 +4,7 @@ const arrowRight = document.getElementById("arrow-right");
 let index = 0;
 let json;
 let visibleCounnt = 4;
+//const url = "https://lowcarb.not.nu/backend/wp-json/wp/v2/posts?_embed&per_page=100";
 const homePostUrl="https://lowcarb.not.nu/backend/wp-json/wp/v2/posts?id=167&per_page=1";
 
 function goLeft() {
@@ -76,31 +77,42 @@ function createHTML() {
 
 configureButtons();
 
+//fetch Introduction
+fetchIntroductionJson();
+
 // fetch carousell
-fetchJson().then(
+fetchJson().then(    
     function (result) {
-        json = result;
-        createHTML();
+        try {
+            enableSpinner(true);
+            json = result;
+            createHTML();
+            enableSpinner(false);
+        }
+        catch(error) {
+            console.log("Exception in fetchIntroductionJson() :" + error);
+            hideClass(".wrapper");
+            createHtmlError(error,".description"); 
+        }
     }
 )
-
 
 // update carousell
 window.addEventListener("resize", createHTML);
 
 async function fetchIntroductionJson() {
     try {
-        console.log("fetch url: " + url);
-        const response = await fetch(url);
+        console.log("fetch url: " + homePostUrl);
+        const response = await fetch(homePostUrl);
         let json = await response.json();
         createIntroductionHTML(json);
     }
-    catch (error) {
-        console.log(error);
-        return null;
+    catch(error) {
+        console.log("Exception in fetchIntroductionJson() :" + error);
+        hideClass(".wrapper");
+        createHtmlError(error,".description"); 
     }
 }
-
 
 function createIntroductionHTML(json) {
     const description = document.querySelector(".description");
@@ -114,4 +126,3 @@ function createIntroductionHTML(json) {
     imagecontainer.innerHTML = `${json[0].content.rendered}`;
 }
 
-fetchIntroductionJson();

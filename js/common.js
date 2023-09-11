@@ -25,3 +25,33 @@ function enableClass(className, show) {
         className.style.display = "none";
     }   
 }
+
+function createHtmlError(error, classLocation) {
+    enableSpinner(false);
+    const class1 = document.querySelector(classLocation);
+
+    document.body.style.backgroundColor = "white";  
+    console.log("Exception: " + error);
+    
+    class1.innerHTML = `
+                            <div class="title"><h1>OPS 404 ERROR.....</h1></div>
+                            <img src="/images/404.webp" height="200" style="max-width: 240px" alt" 404 an error has occurred">
+                            <div class="details-date">An error occurred trying to fetch the API data</div>
+                            
+                            <div class="home"><a href="index.html"><h1>Return to home</h1></a></div>
+                            `;
+    
+    const title = document.querySelector(".title");
+    title.style.color = "black";
+}
+
+function hideClass(classLocation) {
+    const class1 = document.querySelector(classLocation);
+
+    if(class1 === null) {
+        console.log("Error Class:" + classLocation + " not found.");
+        return;
+    }
+    enableClass(class1,false);
+    
+}
