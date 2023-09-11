@@ -15,11 +15,12 @@ async function fetchPost() {
         const json = await response.json();
         console.log(json);
         createHTML(json);
+        blash
         enableSpinner(false);
     }
     catch(error) {
         console.log(error);
-        createHtmlError(error);
+        createHtmlError(error,".blogpostcontainer");
     }
 }
 
