@@ -67,7 +67,8 @@ font-size: 15px;
     border: white 8px dotted; 
 }
 
-h3 {
+
+.questions h2 {
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
@@ -128,7 +129,7 @@ p {
 
 }
 
-.close-message{
+.close-message {
     margin-top: 10px;
     font-size: 15px;
     font-family: var(--fontButton);
@@ -143,6 +144,7 @@ p {
     font-size: 15px;
     font-weight: bold;
 }
+
 .mailStatus {
     color: var(--font-color);
     background-color:var(--lightBlue);
@@ -168,6 +170,11 @@ p {
 
     #messagebox{
         max-width: 200px;
+    }
+
+
+    .questions h2 {
+        font-size: 18px;
     }
 }
 
