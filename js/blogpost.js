@@ -4,7 +4,7 @@ const queryString =document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-const postUrl = "http://lowcarb.not.nu/backend/wp-json/wp/v2/posts/"+ id +"?_embed";
+const postUrl = "https://lowcarb.not.nu/backend/wp-json/wp/v2/posts/"+ id +"?_embed";
 
 async function fetchPost() {
     try {
