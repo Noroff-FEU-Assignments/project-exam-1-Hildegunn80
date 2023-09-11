@@ -5,8 +5,8 @@
 // Settings //
 let pageIcon = "images/logosky.svg";
 let menuClass = ".header";
-let siteName = "Lowcarb heaven"
-let menuTitle = "LOWCARB HEAVEN"
+let siteName = "Low carb heaven"
+let menuTitle = "LOW CARB HEAVEN"
 let mobileSize = false;
 
 const htmlPages = [
