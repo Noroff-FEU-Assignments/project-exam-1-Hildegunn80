@@ -4,6 +4,7 @@
 
 // Settings //
 let pageIcon = "images/logosky.svg";
+let pageIconAltText = "the could icon";
 let menuClass = ".header";
 let siteName = "Low carb heaven"
 let menuTitle = "LOW CARB HEAVEN"
@@ -54,7 +55,8 @@ function addLogo(menu) {
     
     let img = document.createElement("img");
     img.setAttribute("src",pageIcon);
-    
+    img.alt = pageIconAltText;
+
     a.appendChild(img);
     logo.appendChild(a);
     menu.appendChild(logo);

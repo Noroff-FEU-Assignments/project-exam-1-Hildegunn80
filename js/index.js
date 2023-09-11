@@ -4,16 +4,16 @@ const arrowRight = document.getElementById("arrow-right");
 let index = 0;
 let json;
 let visibleCounnt = 4;
-//const url = "https://lowcarb.not.nu/backend/wp-json/wp/v2/posts?_embed&per_page=100";
-const homePostUrl="https://lowcarb.not.nu/backend/wp-json/wp/v2/posts?id=167&per_page=1";
+const homePage="https://lowcarb.not.nu/backend/wp-json/wp/v2/pages/271"
 
 function goLeft() {
-    index-=visibleCounnt-1;
+    console.log("index: " + index);
+    index-=visibleCounnt;
     createHTML();
 }
 
 function goRight() {
-    index+=visibleCounnt+1;
+    index+=visibleCounnt;
     createHTML();
 }
 
@@ -46,11 +46,9 @@ function createHTML() {
         end = json.length;
         index = json.length - visibleCounnt;
     }
-    //console.log("render start: " + index +", end: " + end);
 
     latestPosts.innerHTML = "";
     for (let i = index; i < end; i++) {
-        //console.log("Title: " + json[i].title.rendered);
 
         let featuredmedia = json[i]._embedded['wp:featuredmedia'];
 
@@ -102,8 +100,8 @@ window.addEventListener("resize", createHTML);
 
 async function fetchIntroductionJson() {
     try {
-        console.log("fetch url: " + homePostUrl);
-        const response = await fetch(homePostUrl);
+        console.log("fetch url: " + homePage);
+        const response = await fetch(homePage);
         let json = await response.json();
         createIntroductionHTML(json);
     }
@@ -117,12 +115,12 @@ async function fetchIntroductionJson() {
 function createIntroductionHTML(json) {
     const description = document.querySelector(".description");
     const imagecontainer = document.querySelector(".imagecontainer");
-    
+
     description.innerHTML = `
-        <h1>${json[0].title.rendered}</h1>
+        <h1>${json.title.rendered}</h1>
         <a href="bloglist.html"><button class="recipes" ><i class="fa-solid fa-utensils"></i>Go to recepies</button></a> 
         `;    
 
-    imagecontainer.innerHTML = `${json[0].content.rendered}`;
+    imagecontainer.innerHTML = `${json.content.rendered}`;
 }
 
