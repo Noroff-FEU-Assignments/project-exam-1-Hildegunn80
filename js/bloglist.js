@@ -52,7 +52,7 @@ function createHTML() {
                                                 <p>${"Date:"+json[i].date}</p>
                                                 ${json[i].excerpt.rendered}
                                         </div>
-                                                <a class="readmore" href ="blogpost.html?id=${json[i].id}">Read more<i class="fas fa-long-arrow-alt-right"></i></a>
+                                                <a class="readmore" href ="blogpost.html?id=${json[i].id}" title="click to read this post">Read more<i class="fas fa-long-arrow-alt-right"></i></a>
                                     </section>
                                     `;
     }
