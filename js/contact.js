@@ -62,23 +62,9 @@ function validateForm() {
             form.reset();
         }
     }
-    catch(error) {
-        createHtmlError(error);
+    catch(error) {               
+        createHtmlError(error,".wrapper");
     }
-}
-
-function createHtmlError(error) {
-    const errorContainer = document.querySelector("#contactForm");
-    console.log("Exception: " + error);
-    document.body.style.backgroundColor = "white";
-    
-    errorContainer.innerHTML = `<div class="titleerror"><h2>OPS 404 ERROR....</h2></div>
-                            <img src="/images/404.webp" height="180" style="max-width: 230px">
-                            <div class="details-date">An error occurred processing data</div>
-                            
-                            <div class="home"><a href="index.html"><h2>Return to home</h2></a></div>
-                            `;
-
 }
 
 form.addEventListener("submit", validateForm );

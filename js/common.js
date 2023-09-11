@@ -19,6 +19,10 @@ function enableSpinner(show) {
 }
 
 function enableClass(className, show) {
+    if(className === null) {
+        return
+    }
+
     if(show) {
         className.style.display = "block";
     } else {
@@ -37,6 +41,8 @@ function createHtmlError(error, classLocation) {
     }
     document.body.style.backgroundColor = "white";  
     class1.backgroundColor = "white";
+    class1.style.backgroundImage = "none";
+
     class1.innerHTML = `
                             <div class="title"><h1>OPS 404 ERROR.....</h1></div>
                             <img src="/images/404.webp" height="200" style="max-width: 240px" alt" 404 an error has occurred">
