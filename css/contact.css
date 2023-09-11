@@ -139,8 +139,9 @@ p {
 .email-error,
 .subject-error,
 .error {
-    color: red;
-    font-size: small;
+    color: rgb(193, 40, 40);
+    font-size: 15px;
+    font-weight: bold;
 }
 .mailStatus {
     color: var(--font-color);

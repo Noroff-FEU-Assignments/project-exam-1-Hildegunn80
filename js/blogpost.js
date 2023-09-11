@@ -70,7 +70,7 @@ function createHtmlError(error) {
     
     blogpostContainer.innerHTML += `
                             <div class="title"><h1>OPS 404 ERROR.....</h1></div>
-                            <img src="/images/404.webp" height="200" style="max-width: 240px">
+                            <img src="/images/404.webp" height="200" style="max-width: 240px" alt" 404 an error has occurred">
                             <div class="details-date">An error occurred trying to fetch the API data</div>
                             
                             <div class="home"><a href="index.html"><h1>Return to home</h1></a></div>
