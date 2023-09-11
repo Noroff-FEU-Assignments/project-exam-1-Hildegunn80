@@ -77,8 +77,8 @@
 }
 
 .readmore {
-    width: 150px;
-    height: 50px;
+    width: 200px;
+    height: 60px;
     font-family:var(--fontButton);
     letter-spacing: 1px;
     color: var(--font-color);
