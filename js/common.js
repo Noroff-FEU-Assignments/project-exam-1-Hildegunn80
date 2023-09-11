@@ -28,11 +28,15 @@ function enableClass(className, show) {
 
 function createHtmlError(error, classLocation) {
     enableSpinner(false);
-    const class1 = document.querySelector(classLocation);
-
-    document.body.style.backgroundColor = "white";  
     console.log("Exception: " + error);
-        
+
+    const class1 = document.querySelector(classLocation);
+    if(class1 === null) {
+        console.log("Error Class:" + classLocation + " not found, can't render HTML error.");
+        return;
+    }
+    document.body.style.backgroundColor = "white";  
+    class1.backgroundColor = "white";
     class1.innerHTML = `
                             <div class="title"><h1>OPS 404 ERROR.....</h1></div>
                             <img src="/images/404.webp" height="200" style="max-width: 240px" alt" 404 an error has occurred">

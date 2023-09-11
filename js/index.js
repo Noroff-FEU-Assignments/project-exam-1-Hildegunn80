@@ -89,8 +89,8 @@ fetchJson().then(
         }
         catch(error) {
             console.log("Exception in fetchIntroductionJson() :" + error);
-            hideClass(".wrapper");
-            createHtmlError(error,".description"); 
+            hideClass(".introduction");
+            createHtmlError(error,".wrapper"); 
         }
     }
 )
@@ -107,8 +107,8 @@ async function fetchIntroductionJson() {
     }
     catch(error) {
         console.log("Exception in fetchIntroductionJson() :" + error);
-        hideClass(".wrapper");
-        createHtmlError(error,".description"); 
+        hideClass(".introduction");
+        createHtmlError(error,".wrapper"); 
     }
 }
 

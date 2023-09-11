@@ -54,6 +54,7 @@
   background-color: white;
   align-content: center;
   align-items: center;
+  flex: 1 0 auto;
 }
 
 @-webkit-keyframes zoom {
