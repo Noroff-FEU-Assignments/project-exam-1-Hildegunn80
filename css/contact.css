@@ -90,6 +90,12 @@ p {
     max-width: 80%;
 }
 
+#contactForm {
+    border-radius: 10px;
+
+}
+
+
 .form-validated {
     display: none;
     position: absolute;
@@ -175,6 +181,9 @@ p {
 
     .questions h2 {
         font-size: 18px;
+    }
+    #form_validated {
+        left: 10%;
     }
 }
 
