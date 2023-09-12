@@ -32,7 +32,6 @@
 .blogcontainer p {
 font-size: 18px;
 margin: 0 auto;
-margin-top: 20px;
 }
 
 h3{
@@ -63,7 +62,7 @@ h3{
 }
 
 .text-content{
-    padding: 5px;
+    padding: 1px 5px 1px 5px;
     margin-top: 0px;
     flex-direction: column;
     background-color: #ddeef2;
