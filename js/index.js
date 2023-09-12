@@ -64,7 +64,7 @@ function createHTML() {
         latestPosts.innerHTML += `<section class="carousel">
                                     <div class"content-card-1">
                                         <div class="article"><h2>${json[i].title.rendered}</h2>
-                                          <img src="${source_url}"></div>
+                                          <img src="${source_url.alt_text}"></div>
                                           <a href ="blogpost.html?id=${json[i].id}"><button class="readmore" title="click to read this post"><i class="fa-solid fa-utensils"></i>Read more</button>
                                        </div>
                                     </div>
