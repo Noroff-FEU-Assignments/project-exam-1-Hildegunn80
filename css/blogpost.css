@@ -112,14 +112,15 @@ p{
 @media only screen and (max-width: 500px) {
 
 
-  h2{
+  h2 {
     font-size: 18px;
     padding: 5px;
   }
 
-  h3{
-    font-size: 12px;
+  h3 {
+    font-size: 15px;
   }
+
 
   .wp-block-image{
     object-fit: cover;
