@@ -108,7 +108,7 @@ function addMenu(menu) {
     menu.appendChild(input);
    
     // Add Label
-    let label = document.createElement("aria-label");
+    let label = document.createElement("label");
     label.setAttribute("for","menu-checkbox");
     label.classList.add("hamburger-icon");
     menu.appendChild(label);
