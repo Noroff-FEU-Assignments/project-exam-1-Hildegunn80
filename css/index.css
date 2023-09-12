@@ -181,20 +181,13 @@
         font-size: 14px;
     }
 
-    .carousel {
-        display: block;
-    }
-
-    .article{
-        width: 300px;
-    }
-
-
 }
 
 @media only screen and (max-width:400px) {
     .wrapper {
         flex-direction: column;
+        align-content: center;
+        justify-content: center;
     }
 
     .description h1 {        
@@ -203,5 +196,15 @@
 
     .article h2 {
         font-size: 12px;
+    }
+
+    .content-card-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .article{
+        width: 300px;
     }
 }
