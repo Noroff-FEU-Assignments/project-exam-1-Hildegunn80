@@ -51,13 +51,15 @@ function createHTML() {
 
         blogContainer.innerHTML += `<section class="blogPostWrapper">
                                         <a href="blogpost.html?id=${json[i].id}">
-                                            <img src="${source_url}" id="image"></img>
+                                            <div="imagecontainer">
+                                                <img src="${source_url}" id="image"></img>
+                                            </div>
                                             <div class="text-content">
                                                 <h2>${json[i].title.rendered}</h2>
-                                                <p>${"Date:"+json[i].date}</p>
-                                                ${json[i].excerpt.rendered}
-                                        </div>
-                                                <a class="readmore" href ="blogpost.html?id=${json[i].id}" title="click to read this post">Read more<i class="fas fa-long-arrow-alt-right"></i></a>
+                                                <h3 id="date">${"Date:"+json[i].date}</h3>
+                                                <p> ${json[i].excerpt.rendered}</p>
+                                            </div>
+                                            <a class="readmore" href ="blogpost.html?id=${json[i].id}" title="click to read this post">Read more<i class="fas fa-long-arrow-alt-right"></i></a>
                                     </section>
                                     `;
     }

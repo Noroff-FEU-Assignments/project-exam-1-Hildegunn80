@@ -6,10 +6,11 @@
 }
  
 .blogcontainer {
-    max-width: 1550px;
+    width: 90%;
     align-content: center;
+    justify-content: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;       
+    grid-template-columns: 33% 33% 33%;       
 }
 
 .blogPostWrapper {
@@ -27,8 +28,15 @@
     font-size: 25px;
 }
 
+
 .blogcontainer p {
-    font-size: 18px;
+font-size: 18px;
+margin: 0 auto;
+margin-top: 20px;
+}
+
+h3{
+    font-size: 15px;
 }
 
 .morePosts {
@@ -51,6 +59,7 @@
 
 .content-card-1 {
     display: flex;
+    max-width: 500px;
 }
 
 .text-content{
@@ -62,9 +71,13 @@
     max-width:500px;
     display: flex;
 }
+.imagecontainer {
+    max-width: 490px;
+}
+
 
 #image {
-    max-width:500px;
+    object-fit:cover;
     margin-bottom: auto;
 }
 
@@ -88,12 +101,12 @@
 
 @media only screen and (max-width: 1000px) {
     .blogcontainer {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 45% 45%;
     }
 }
 @media only screen and (max-width: 500px) {
     .blogcontainer {
-        grid-template-columns: 1fr;
+        grid-template-columns: 95%;
     }
 
     .blogcontainer h2{
