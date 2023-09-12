@@ -67,7 +67,7 @@ function createHTML() {
                                     <div class"content-card-1">
                                         <div class="article"><h2>${json[i].title.rendered}</h2>
                                           <img src="${source_url}"></div>
-                                          <a href ="blogpost.html?id=${json[i].id}"><button class="readmore" title="click to read this post"><i class="fa-solid fa-utensils" title="knive and fork"></i>Read more</button></a>
+                                          <a href ="blogpost.html?id=${json[i].id}"><button class="readmore" title="click to read this post"><i class="fa-solid fa-utensils" title="knive and fork"></i>Read post</button></a>
                                        </div>
                                     </div>
                                 </section>
