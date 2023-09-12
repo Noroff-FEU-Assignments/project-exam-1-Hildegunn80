@@ -4,7 +4,7 @@
 
 // Settings //
 let pageIcon = "images/logosky.svg";
-let pageIconAltText = "the could icon";
+let pageIconAltText = "the cloud icon";
 let menuClass = ".header";
 let siteName = "Low carb heaven"
 let menuTitle = "LOW CARB HEAVEN"
