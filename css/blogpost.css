@@ -41,11 +41,19 @@
   display: flex;  
 }
 
+
+
+
 .blogpostcontainer p, h2, h3, ul{
   max-width: 600px;
   margin: 0 auto;
   margin-top: 20px;
 }
+
+.title h2 {
+  margin-top: 0px;
+}
+
 
 
 .wrapper{
@@ -117,6 +125,11 @@ p{
     font-size: 12px;
     padding: 5px;
   }
+
+  .blogpostcontainer {
+    padding: 7px;
+  }
+
 }
 
 @media only screen and (max-width: 360px) {
