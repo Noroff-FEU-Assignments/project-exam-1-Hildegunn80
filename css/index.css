@@ -191,6 +191,10 @@
         font-size: 35px;
     }
 
+    .carousel {
+        display: block;
+    }
+
     .article h2 {
         font-size: 12px;
     }
