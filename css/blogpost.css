@@ -44,7 +44,11 @@
 
 .blogpostcontainer{
   max-width: 1000px;
-  display: flex;  
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
 }
 
 
@@ -105,6 +109,25 @@ p {
 
 .wrapper li {
   font-family:'Poppins', sans-serif;
+}
+
+.returnBloglist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 10px;
+    font-family:var(--fontButton);
+    letter-spacing: 1px;
+    color: var(--font-color);
+    font-size: 15px;
+    background-color: var(--orange);
+    border: whitesmoke solid 2px; 
+    margin-top:20px;  
+    margin-bottom: 20px; 
+}
+.returnBloglist:hover {
+  background-color: var(--lighterOrange);
 }
 
 /* modal small screen */
