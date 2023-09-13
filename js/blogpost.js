@@ -41,6 +41,7 @@ function createHTML(json) {
                                     <img class="modal-content" id="idImageModal">
                                     <p id="shortenedText"></p>
                                 </div>
+                                <a href="bloglist.html" class="returnBloglist">Return to bloglist</a>
                                 `;
     banner.innerHTML += `
                                <h1>${json.title.rendered}</h1>`
