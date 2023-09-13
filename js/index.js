@@ -122,7 +122,7 @@ function createIntroductionHTML(json) {
 
     description.innerHTML = `
         <h1>${json.title.rendered}</h1>
-        <a href="bloglist.html"><button class="recipes" ><i class="fa-solid fa-utensils"></i>Go to recepies</button></a> 
+        <a href="bloglist.html"><button class="recipes" ><i class="fa-solid fa-utensils"></i>Go to recipes</button></a> 
         `;    
 
     imagecontainer.innerHTML = `${json.content.rendered}`;
