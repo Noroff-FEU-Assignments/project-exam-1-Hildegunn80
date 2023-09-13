@@ -11,6 +11,7 @@
     flex: 1 0 auto;
 }
 
+
 #contactForm {
     max-width: 100%;
     justify-content: center;
@@ -21,22 +22,27 @@
     padding: 25px;
 }
 
+
 .message {
     max-width: 95%;
     box-sizing: border-box;
 }
 
+
 #messagebox textarea {
     max-width: 95%;
 }
+
 
  h2 {
     font-size: 40px;
  }
 
+
  .titleerror h2 {
     font-size: 20px;
  }
+
 
  .home h2 {
 font-size: 15px;
@@ -56,9 +62,11 @@ font-size: 15px;
     font-weight: bold;
 }
 
+
 #sendMessage:hover {
     background-color: var(--buttonGreenHover);
 }
+
 
 .questions {
     background-color: var(--orange);
@@ -75,9 +83,11 @@ font-size: 15px;
     font-size: 20px;
 }
 
+
 .questions p {
     font-size: 16px;
 }
+
 
 p {
     font-size: 12px;
@@ -89,6 +99,7 @@ p {
     flex-direction: row;
     max-width: 80%;
 }
+
 
 #contactForm {
     border-radius: 10px;
@@ -110,12 +121,14 @@ p {
     border: 2px white ;
 } 
 
+
 .form-validated i {
     display: block;
     font-weight: bold;
     color: green;
     margin: 10px;
 }
+
 
 #form_validated {
     display: none;
@@ -130,16 +143,20 @@ p {
     color:white;
     border:solid 7px rgb(207, 240, 252) ;
 } 
-#form_validated i{
+
+
+#form_validated i {
     margin-bottom: 10px;
 
 }
+
 
 .close-message {
     margin-top: 10px;
     font-size: 15px;
     font-family: var(--fontButton);
 }
+
 
 /* form valid*/
 .form-error,
@@ -150,6 +167,7 @@ p {
     font-size: 15px;
     font-weight: bold;
 }
+
 
 .mailStatus {
     color: var(--font-color);
