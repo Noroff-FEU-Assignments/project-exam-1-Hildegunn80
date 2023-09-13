@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
 }
+
  
 .blogcontainer {
     width: 90%;
@@ -13,6 +14,7 @@
     grid-template-columns: 33% 33% 33%;       
 }
 
+
 .blogPostWrapper {
     display: flex;
     flex-direction: column;
@@ -20,9 +22,11 @@
     background-color: #ddeef2;
 }
 
+
 .blogcontainer a {
     padding: 5px; 
 }
+
 
 .blogcontainer h2 {
     font-size: 25px;
@@ -33,6 +37,7 @@
 font-size: 18px;
 margin: 0 auto;
 }
+
 
 h3{
     font-size: 15px;
@@ -48,9 +53,13 @@ h3{
     margin: 10px;
     padding: 10px;
 }
+
+
 .morePosts:hover {
     background-color:rgb(239, 232, 232) ;   
 }
+
+
 .morePosts i {
     margin:5px;   
 }
@@ -61,7 +70,8 @@ h3{
     max-width: 500px;
 }
 
-.text-content{
+
+.text-content {
     padding: 1px 5px 1px 5px;
     margin-top: 0px;
     flex-direction: column;
@@ -70,6 +80,8 @@ h3{
     max-width:500px;
     display: flex;
 }
+
+
 .imagecontainer {
     max-width: 490px;
 }
@@ -80,7 +92,9 @@ h3{
     margin-bottom: auto;
 }
 
-.readmore{
+
+
+.readmore {
     font-family:var(--fontButton);
     letter-spacing: 1px;
     color: var(--font-color);
@@ -90,19 +104,25 @@ h3{
     margin-right:15px;
 }
 
+
 .readmore:hover {
     color: rgb(101, 93, 93);
 }
 
+
+
 .readmore i{
     margin: 5px;
 }
+
 
 @media only screen and (max-width: 1000px) {
     .blogcontainer {
         grid-template-columns: 45% 45%;
     }
 }
+
+
 @media only screen and (max-width: 500px) {
     .blogcontainer {
         grid-template-columns: 95%;
