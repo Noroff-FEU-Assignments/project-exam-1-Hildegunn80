@@ -62,11 +62,12 @@ function createHTML() {
     
 
         let source_url = featuredmedia['0'].source_url;
+        let alt = featuredmedia['0'].alt_text;
         
         latestPosts.innerHTML += `<section class="carousel">
                                     <div class"content-card-1">
                                         <div class="article"><h2>${json[i].title.rendered}</h2>
-                                          <img src="${source_url}"></div>
+                                          <img src="${source_url}" alt="${alt}">
                                           <a href ="blogpost.html?id=${json[i].id}"><button class="readmore" title="click to read this post"><i class="fa-solid fa-utensils" title="knive and fork"></i>Read post</button></a>
                                        </div>
                                     </div>
