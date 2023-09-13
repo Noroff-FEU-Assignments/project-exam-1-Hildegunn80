@@ -77,8 +77,11 @@
               </div>
 
                <div class="message">
-                  <input name="message"textarea id="messagebox" style="max-width: 100%;" cols="40" rows="10" placeholder="At least 25 characters"></textarea> 
-                    <div class="error" id="messageError">Please fill inn your message, at least 25 charaters</div>
+                 <label>
+                     Fill in your message
+                  </label>
+                    <input name="message"textarea id="messagebox" style="max-width: 100%;" cols="40" rows="10" placeholder="At least 25 characters"></textarea> 
+                       <div class="error" id="messageError">Please fill inn your message, at least 25 charaters</div>
                     <input type="submit" value="Send" id="sendMessage" title="click to send message">
                   </div>
                </div>
@@ -87,7 +90,7 @@
         
         <div id="form_validated" class="form-validated">
           <i class="fa-solid fa-check fa-3x" title="v-shaped icon signifying that message has been sent"></i>
-          <p>Thank you!</p>
+           <p>Thank you!</p>
            <p>Your message was successfully sent</p>
            <button class="close-message" title="click to close message">Close</button>
        </div>
