@@ -48,11 +48,12 @@ function createHTML() {
         }
 
         let source_url = featuredmedia['0'].source_url;
+        let alt = featuredmedia['0'].alt_text;
 
         blogContainer.innerHTML += `<section class="blogPostWrapper">
                                         <a href="blogpost.html?id=${json[i].id}">
                                             <div="imagecontainer">
-                                                <img src="${source_url}" id="image"></img>
+                                                <img src="${source_url}" alt="${alt}"id="image"></img>
                                             </div>
                                             <div class="text-content">
                                                 <h2>${json[i].title.rendered}</h2>
