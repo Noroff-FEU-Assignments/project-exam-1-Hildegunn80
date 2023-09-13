@@ -35,13 +35,13 @@ function createHTML(json) {
     }
 
     blogpostContainer.innerHTML += `
-                                <div class="blogpost">${json.content.rendered}</div>
+                                    <div class="blogpost">${json.content.rendered}</div>
 
-                                <div id="imageModal" class="modal">
-                                    <img class="modal-content" id="idImageModal">
-                                    <p id="shortenedText"></p>
-                                </div>
-                                <a href="bloglist.html" class="returnBloglist">Return to bloglist</a>
+                                    <div id="imageModal" class="modal">
+                                        <img class="modal-content" id="idImageModal">
+                                        <p id="shortenedText"></p>
+                                    </div>
+                                    <a href="bloglist.html" class="returnBloglist">Return to bloglist</a>
                                 `;
     banner.innerHTML += `
                                <h1>${json.title.rendered}</h1>`
