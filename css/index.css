@@ -6,10 +6,12 @@
     padding: 10px;    
 }
 
+
 .wp-image-168 {
     width: auto;
     height: auto;
 }
+
 
 .article {
     display: flex;
@@ -19,12 +21,14 @@
     justify-content: center;
 }
 
+
 .article h2 {
     height: 30px;
     font-size: 20px;
     text-align: center;
     line-height: 0px;
 }
+
 
 .carousel {
     display: flex;
@@ -34,10 +38,12 @@
     background-color: #BEDFEA;
 }
 
+
 .carousel a {
     padding: 0px;
     margin: 0px;
 }
+
 
 .wrapper {
     display: flex;
@@ -47,7 +53,8 @@
     background-color: #ddedf3;
 }
 
-#latest-posts-heading{
+
+#latest-posts-heading {
     text-align: center;
     position: relative;
     background-color: #cbe4ed;
@@ -56,20 +63,24 @@
     margin-bottom: 0px;
     font-family: 'Caveat', cursive;
 }
+
  
 #arrow-left, #arrow-right {
     margin: 10px;
     color: black;
 }
 
-#arrow-left i:hover, #arrow-right i:hover{
+
+#arrow-left i:hover, #arrow-right i:hover {
     color: #226074;
 }
+
 
 .button {
     border: none;
     background-color:transparent;
 }
+
 
 .introduction {
     display: flex;
@@ -79,11 +90,14 @@
     padding-left: 50px;
 }
 
-.content-card-1{
+
+.content-card-1 {
     display: flex;
     align-content: center;
     justify-content: center;
 }
+
+
 
 .readmore {
     width: 200px;
@@ -97,20 +111,27 @@
     margin: 7px;    
 }
 
+
 .readmore:hover {
     background-color: var(--lightBlue);
 }
+
 
 .readmore i {
     margin:10px;
 }
 
+
 .wp-blockimage {
     max-width: 80%;
 }
+
+
 .imagecontainer {
     max-width:100%;
 }
+
+
 
 .description {
     background-color:var(--lighterOrange);
@@ -118,6 +139,8 @@
     align-items: center;
     flex-direction: column;
 }
+
+
 
 .description h1 {
     font-size: 25px;
@@ -128,10 +151,14 @@
     color: var(--font-color);
 }
 
+
+
 .description {
     padding:10px;
     font-size: 20px;
 }
+
+
 
 .description p {
     text-align: left;
@@ -142,11 +169,13 @@
     background-color: var(--lightBlue);
 }
 
+
 @media only screen and (max-width:1270px) {
     .article h2 {
         font-size: 20px;
     }
 }
+
 
 @media only screen and (max-width:1200px) {
     .description h2 {
