@@ -189,13 +189,12 @@
 
 @media only screen and (max-width:790px) {
     .description h1 {
-        background-color: var(--lighterOrange);
+        /*background-color: var(--lighterOrange);*/
+        border: 6px dotted lightblue;
+        background-color: white;
     }
 
-    .description {
-        background-color: var(--orange);
-    }
-
+    
     .introduction {
         flex-direction: column;
         padding: 0px;
@@ -231,6 +230,12 @@
     .description h1 {        
         font-size: 35px;
     }
+
+    .introduction {
+        background-color:white ;
+        border: dotted lightblue 8px
+    }
+
 
     .article h2 {
         font-size: 15px;
