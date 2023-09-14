@@ -225,18 +225,17 @@ p {
     max-width: 80%;
   }
 
-  #messagebox {
-    width: 100%;
-  }
+  
 
   #FirstName,
   #LastName,
-  #email {
-   max-width: 270px;
+  #email, 
+  #messagebox {
+   width: 180px;
   }
 
   #commentForm {
-    width:100%;
+    width:99%;
     padding: 0px;
   }
 
