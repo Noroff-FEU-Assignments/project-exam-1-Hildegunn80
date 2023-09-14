@@ -40,6 +40,49 @@
     <div class="wrapper">
         <div class="blogpostcontainer"></div>
    </div>
+   
+       <div class="comment-form">
+         <form action="/"method="POST" id="commentForm">
+             <div class="labelForComment">
+               <label>
+                 Your comment
+               </label>
+             </div>
+            
+              <div class="textarea">
+                  <textarea id="messagebox" name="message" style="max-width: 100%;" cols="40" rows="5" placeholder="At least 25 characters"></textarea> 
+              </div>
+                    <div class="labelForFirstname">   
+                        <label>
+                            First name
+                        </label>
+                    </div>
+                <div>
+                    <input name="inputFirstName" id="FirstName"/>
+                </div>
+            
+                <div class="labelForLastname">
+                    <label>
+                        Last Name 
+                    </label>
+                </div>
+                <div>
+                    <input name="inputLastName" id="LastName"/>
+                </div>
+
+                <div class="labelForEmail">
+                    <label>
+                    Email
+                    </label>
+                </div>
+                <div>
+                    <input name="email" id="email"/>
+                </div>
+             <div class="sendMessage">
+               <input type="submit" value="Post comment" id="sendMessage" title="click to send message">
+             </div>
+          </form>
+      </div>
        
     <script src="js/common.js"></script> 
     <script src="js/blogpost.js"></script> 

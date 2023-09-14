@@ -111,6 +111,52 @@ p {
   font-family:'Poppins', sans-serif;
 }
 
+/*Styling for comment form*/
+
+.comment-form {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
+
+#commentForm {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  border: 5px dotted lightblue;
+  padding: 5px;
+}
+
+
+.labelForComment,
+.labelForFirstname,
+.labelForLastname,
+.labelForEmail {
+  max-width: 300px;
+  text-align: left;
+}
+
+
+#FirstName,
+#LastName,
+#email {
+ width: 300px;
+}
+
+
+#sendMessage {
+  margin-top: 5px;
+}
+
+
+
+
+
+
+
 .returnBloglist {
     display: flex;
     align-items: center;
@@ -168,9 +214,29 @@ p {
   }
 
 
-
   .blogpostcontainer {
     padding: 7px;
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+  .comment-form {
+    max-width: 80%;
+  }
+
+  #messagebox {
+    width: 100%;
+  }
+
+  #FirstName,
+  #LastName,
+  #email {
+   max-width: 270px;
+  }
+
+  #commentForm {
+    max-width: 270px;
   }
 
 }
