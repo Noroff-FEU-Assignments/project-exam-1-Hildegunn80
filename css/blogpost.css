@@ -152,11 +152,6 @@ p {
 }
 
 
-
-
-
-
-
 .returnBloglist {
     display: flex;
     align-items: center;
@@ -232,11 +227,6 @@ p {
   #email, 
   #messagebox {
    width: 180px;
-  }
-
-  #commentForm {
-    width:99%;
-    padding: 0px;
   }
 
 }
