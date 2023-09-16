@@ -68,10 +68,10 @@ function createCommentHTML(json) {
     console.log(json);
 
     commentContainer.innerHTML += ` <section class="commentWrapper">
-                                        <h2>${json.author_name}</h2>
+                                        <h3>${json.author_name}</h3>
                                         <img src="${json.author_avatar_urls[48]}" alt="avatar" id="image"></img>
-                                        <h3>${json.content.rendered}</h3>
-                                        <h4>${json.date}</h4>
+                                        <h4>${json.content.rendered}</h4>
+                                        <h5>${json.date}</h5>
                                     </section>
                                     `;
 }
