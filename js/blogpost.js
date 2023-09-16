@@ -14,9 +14,11 @@ const blogpostContainer = document.querySelector(".blogpostcontainer");
 const banner = document.querySelector(".banner");
 const queryString =document.location.search;
 const params = new URLSearchParams(queryString);
+const commentContainer = document.querySelector(".commentContainer");
 const id = params.get("id");
 
 const postUrl = "https://lowcarb.not.nu/backend/wp-json/wp/v2/posts/"+ id +"?_embed";
+const commentEndpoint = "https://lowcarb.not.nu/backend/wp-json/wp/v2/comments";
 
 async function fetchPost() {
     try {
@@ -33,7 +35,46 @@ async function fetchPost() {
     }
 }
 
+async function fetchComments() {
+    try {
+        const response = await fetch(commentEndpoint+"?post="+id);
+        if (!response.ok) {
+            throw new Error("Error fetch comment from API", {cause: response});
+        }
+        const json = await response.json();
+        createCommentHTMLs(json); 
+        enableSpinner(false);
+    }
+    catch(error) {
+        createHtmlError(error,".blogpostcontainer");
+    }
+}
+
 fetchPost();
+fetchComments();
+
+function createCommentHTMLs(json) {
+    //console.log(json);
+    
+    commentContainer.innerHTML = "";
+
+    for (let i = 0 ; i < json.length; i++) {        
+        createCommentHTML(json[i]);
+    }
+}
+
+function createCommentHTML(json) {
+    console.log("comment:");
+    console.log(json);
+
+    commentContainer.innerHTML += ` <section class="commentWrapper">
+                                        <h2>${json.author_name}</h2>
+                                        <img src="${json.author_avatar_urls[48]}" alt="avatar" id="image"></img>
+                                        <h3>${json.content.rendered}</h3>
+                                        <h4>${json.date}</h4>
+                                    </section>
+                                    `;
+}
 
 function createHTML(json) {
     blogpostContainer.innerHTML = "";
@@ -55,8 +96,7 @@ function createHTML(json) {
                                     </div>
                                     <a href="bloglist.html" class="returnBloglist">Return to bloglist</a>
                                 `;
-    banner.innerHTML += `
-                               <h1>${json.title.rendered}</h1>`
+    banner.innerHTML += `<h1>${json.title.rendered}</h1>`
     
     
     let modal = document.getElementById("imageModal");
@@ -95,13 +135,41 @@ function enableModal() {
     modal.addEventListener('click', modalClick);
 }
 
+// https://lowcarb.not.nu/backend/wp-json/wp/v2/comments?
+
+function postComment(firstName, lastName, email, comment, postId) {
+    //console.log("post Comment..."+ postId);
+
+    let json = JSON.stringify(
+        {
+            "author_name": firstName + " " + lastName,
+            "content": comment,
+            "post": postId,
+            "author_email": email
+        }
+        );
+    console.log(json);
+    
+    fetch(commentEndpoint, {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: json
+    })
+       .then(response => response.json())
+       .then(response => createCommentHTML(response))
+}
 
 //* Validate comment form
-
 function validateForm() {
     try {
         event.preventDefault();
 
+        //postComment("Hildegunn", "Bjelland","hildegunn.bjelland@gmail.com", "wow this javascript rulez",id);
+
+        
         let success = true;
         if(isLenghtValid(firstName.value,5)===true) {
             firstnameError.style.display ="none"
@@ -116,7 +184,6 @@ function validateForm() {
             success = false;
             lastNameError.style.display ="block"
         }
-
 
         if(isLenghtValid(comment.value,10)===true) {
             messageError.style.display ="none"
@@ -133,6 +200,8 @@ function validateForm() {
         }
 
         if(success) {
+            postComment(firstName.value, lastName.value,email.value,comment.value,id);
+
             formMessageValidated.style.display=("block")
             form.reset();
         }
@@ -148,19 +217,4 @@ buttonCloseMessage.addEventListener("click", closeMessage);
 function closeMessage() {
     formMessageValidated.style.display=("none")
 } 
-
-function isEmailValid(email) {
-    const regEx = /\S+@\S+\.\S+/;
-    const patternMatches = regEx.test(email);
-    return patternMatches;
-}
-
-function isLenghtValid(value,len ) {
-    if (value.trim().length>=len) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
 
