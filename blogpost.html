@@ -41,48 +41,62 @@
         <div class="blogpostcontainer"></div>
    </div>
    
-       <div class="comment-form">
-         <form action="/"method="POST" id="commentForm">
-             <div class="labelForComment">
+    <div class="comment-form">
+        <form action="/"method="POST" id="commentForm">
+            <div class="labelForComment">
                <label>
                  Your comment
                </label>
-             </div>
+            </div>
             
-              <div class="textarea">
-                  <textarea id="messagebox" name="message" style="max-width: 100%;" cols="40" rows="5" placeholder="At least 25 characters"></textarea> 
-              </div>
-                    <div class="labelForFirstname">   
-                        <label>
-                            First name
-                        </label>
-                    </div>
-                <div>
-                    <input name="inputFirstName" id="FirstName"/>
-                </div>
+            <div class="textarea">
+                <textarea id="messagebox" name="message" style="max-width: 100%;" cols="40" rows="5" placeholder="At least 25 characters"></textarea> 
+                <div class="error" id="messageError">Please fill inn your message, at least 10 charaters</div>
+            </div>
+            <div class="labelForFirstname">   
+                <label>
+                    First name
+                </label>
+            </div>
+            <div>
+                <input name="inputFirstName" id="FirstName"/>
+                <div class="form-error" id="FnameError" placeholder="At least 5 characters">Please fill in your first name</div>
+            </div>
             
-                <div class="labelForLastname">
-                    <label>
-                        Last Name 
-                    </label>
-                </div>
-                <div>
-                    <input name="inputLastName" id="LastName"/>
-                </div>
+            <div class="labelForLastname">
+                <label>
+                    Last Name 
+                </label>
+            </div>
 
-                <div class="labelForEmail">
-                    <label>
-                    Email
-                    </label>
-                </div>
-                <div>
-                    <input name="email" id="email"/>
-                </div>
-             <div class="sendMessage">
+            <div>
+                <input name="inputLastName" id="LastName"/>
+                <div class="form-error" id="LnameError" placeholder="At least 5 characters">Please fill in your last name</div>
+            </div>
+
+            <div class="labelForEmail">
+                <label>
+                Email
+                </label>
+            </div>
+            
+            <div>
+                <input name="email" id="email"/>
+                <div class="form-error" id="emailError">Please fill in your email</div>
+            </div>
+
+            <div class="sendMessage">
                <input type="submit" value="Post comment" id="sendMessage" title="click to send message">
-             </div>
-          </form>
-      </div>
+            </div>
+        </form>
+ </div>
+      
+ <div id="form_validated" class="form-validated">
+        <i class="fa-solid fa-check fa-3x" title="v-shaped icon signifying that message has been sent"></i>
+        <p>Thank you!</p>
+        <p>Your message was successfully sent</p>
+        <button class="close-message" title="click to close message">Close</button>
+ </div>
        
     <script src="js/common.js"></script> 
     <script src="js/blogpost.js"></script> 
