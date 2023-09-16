@@ -171,6 +171,15 @@ p {
   background-color: var(--lighterOrange);
 }
 
+
+/*Styling for comments*/
+.commentWrapper h3,h4,h5 {
+font-family: var(--fontParagraphs);
+}
+
+
+
+
 /* modal small screen */
 @media only screen and (max-width: 800px) {
     .modal-content {
