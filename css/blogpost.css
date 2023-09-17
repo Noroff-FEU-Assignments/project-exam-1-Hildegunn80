@@ -183,10 +183,45 @@ p {
 
 
 /*Styling for comments*/
-.commentWrapper h3,h4,h5 {
-font-family: var(--fontParagraphs);
+
+.commentContainer {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
 }
 
+
+.commentWrapper{
+  max-width: 100%;
+  
+}
+
+.commentWrapper h3,h4,h5{
+font-family: var(--fontParagraphs);
+max-width: 600px;
+margin: 0 auto;
+margin-top: 20px;
+}
+
+p {
+font-family: var(--fontParagraphs);
+max-width: 600px;
+margin: 0 auto;
+margin-top: 20px;
+}
+
+.comment {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.comment p {
+  width: 100%;
+  word-wrap: wrap;
+}
 
 
 
