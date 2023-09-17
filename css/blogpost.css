@@ -167,14 +167,14 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*align-items: left;*/
     margin: 5px;
 }
 
 .commentWrapper {
     max-width: 100%;
-    background-color: lightgray;
+    background-color:#F3F9FB;
     margin: 2px;
+    padding-left: 5px;
 }
 
 .commentWrapper h3,h4,h5 {
@@ -244,6 +244,7 @@ p {
   .blogpostcontainer {
     padding: 7px;
   }
+
   #commentForm {
    max-width: 400px;
 
